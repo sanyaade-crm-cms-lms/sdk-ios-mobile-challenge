@@ -1,0 +1,8 @@
+HTTP/1.1 201 Created
+Date: 2015-09-11T17:32:33-04:00
+Status: 201 Created
+Connection: close
+Content-Type: application/json; charset=utf-8
+Content-Length: 110
+
+{"accepted_on":"generated_testAcceptedOn","accepted_by":"testAcceptedBy","rate_reference":"testRateReference"}

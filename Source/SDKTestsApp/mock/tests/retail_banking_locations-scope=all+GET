@@ -1,0 +1,8 @@
+HTTP/1.1 200 OK
+Date: 2015-09-11T17:32:33-04:00
+Status: 200 OK
+Connection: close
+Content-Type: application/json; charset=utf-8
+Content-Length: 388
+
+[{"id":"generated_testId","address_line_one":"testAddressLineOne","address_line_two":"testAddressLineTwo","city":"testCity","comments":"testComments","country":"testCountry","external_link":"testExternalLink","latitude":"testLatitude","location_type":"testLocationType","longitude":"testLongitude","name":"testName","phone":"testPhone","postal_code":"testPostalCode","state":"testState"}]

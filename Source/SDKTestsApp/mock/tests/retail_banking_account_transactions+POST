@@ -1,0 +1,8 @@
+HTTP/1.1 201 Created
+Date: 2015-09-11T17:32:33-04:00
+Status: 201 Created
+Connection: close
+Content-Type: application/json; charset=utf-8
+Content-Length: 452
+
+{"id":"generated_testId","account_id":"testAccountId","activity":"testActivity","check_image_eligible":"testCheckImageEligible","date_posted":"testDatePosted","formatted_amount":"testFormattedAmount","pending_date":"testPendingDate","transaction_amount":152.0,"transaction_description":"testTransactionDescription","transaction_identifier":"testTransactionIdentifier","transaction_index":"testTransactionIndex","transaction_type":"testTransactionType"}

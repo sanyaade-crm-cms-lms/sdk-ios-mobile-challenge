@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pancakes>
+    <vegan>
+        <Pancake>
+            <id>1</id>
+            <couleur>Blue</couleur>
+            <sweetness>Very</sweetness>
+            <thickness_in_inches>1</thickness_in_inches>
+            <others>
+                <vegan>true</vegan>
+            </others>
+        </Pancake>
+        <Pancake>
+            <id>2</id>
+            <couleur>Green</couleur>
+            <sweetness>Not</sweetness>
+            <thickness_in_inches>1</thickness_in_inches>
+            <others>
+                <vegan>true</vegan>
+            </others>
+        </Pancake>
+    </vegan>
+</pancakes>

@@ -1,0 +1,8 @@
+HTTP/1.1 200 OK
+Date: 2015-09-11T17:32:33-04:00
+Status: 200 OK
+Connection: close
+Content-Type: application/json; charset=utf-8
+Content-Length: 403
+
+{"id":"generated_testId","account_status":"testAccountStatus","address":{"key":-1,"nested":{"list":[],"hash":{}}},"bank_account_type":"testBankAccountType","bank_address":"testBankAddress","bank_country":"testBankCountry","bic":"testBic","company_name":"testCompanyName","country":"testCountry","currency":"testCurrency","entity_type":"testEntityType","iban":"testIban","routing_code":"testRoutingCode"}

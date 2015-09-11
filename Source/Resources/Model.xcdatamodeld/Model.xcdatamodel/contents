@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2061" systemVersion="12D78" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="APContext" representedClassName="APContext" syncable="YES">
+        <relationship name="currentCredentials" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="APInternalObject" inverseName="currentCredentialsContext" inverseEntity="APInternalObject" syncable="YES"/>
+    </entity>
+    <entity name="APInternalObject" representedClassName="APInternalObject" isAbstract="YES" syncable="YES">
+        <relationship name="currentCredentialsContext" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="APContext" inverseName="currentCredentials" inverseEntity="APContext" syncable="YES"/>
+        <relationship name="requests" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="APCachedRequest" inverseName="objects" inverseEntity="APCachedRequest" syncable="YES"/>
+    </entity>
+    <entity name="APCachedRequest" representedClassName="APCachedRequest" syncable="YES">
+        <attribute name="parameters" attributeType="Transformable" valueTransformerName="APKeyedArchiverTransformer" syncable="YES"/>
+        <attribute name="scope" attributeType="String" syncable="YES"/>
+        <attribute name="resource" attributeType="String" syncable="YES"/>
+        <relationship name="objects" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="APInternalObject" inverseName="requests" inverseEntity="APInternalObject" syncable="YES"/>
+    </entity>
+    <entity name="CapitalMarketsActivity$AP$" representedClassName="CapitalMarketsActivity$AP$" parentEntity="APInternalObject"  syncable="YES">
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="activityType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="citiAttendees" optional="YES" attributeType="Transformable" valueTransformerName="APKeyedArchiverTransformer" syncable="YES"/>
+        <attribute name="clientContacts" optional="YES" attributeType="Transformable" valueTransformerName="APKeyedArchiverTransformer" syncable="YES"/>
+        <attribute name="clientId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="clientName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="date" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="region" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="year" optional="YES" attributeType="Integer 32" syncable="YES"/>
+    </entity>
+    <entity name="CapitalMarketsContact$AP$" representedClassName="CapitalMarketsContact$AP$" parentEntity="APInternalObject"  syncable="YES">
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="city" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="clientName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="country" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="jobRole" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="jobTitle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="phone" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="state" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="year" optional="YES" attributeType="Integer 32" syncable="YES"/>
+    </entity>
+    <entity name="CapitalMarketsContentService$AP$" representedClassName="CapitalMarketsContentService$AP$" parentEntity="APInternalObject"  syncable="YES">
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="alertDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="allAttachments" optional="YES" attributeType="Transformable" valueTransformerName="APKeyedArchiverTransformer" syncable="YES"/>
+        <attribute name="analystId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="analystType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="assetClass" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="attachmentId" optional="YES" attributeType="Integer 32" syncable="YES"/>
+        <attribute name="authorDetails" optional="YES" attributeType="Transformable" valueTransformerName="APKeyedArchiverTransformer" syncable="YES"/>
+        <attribute name="authorId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="authorName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="authors" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="company" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="contentServicesType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="contentType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="contentUrl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="dateString" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="documentUrl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="encryptedId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fileLink" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fileName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fileType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="formatedPubDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="formattedDateStr" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="headline" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="hitCount" optional="YES" attributeType="Integer 32" syncable="YES"/>
+        <attribute name="htmlEscapedTitle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="image" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="imageGroup" optional="YES" attributeType="Transformable" valueTransformerName="APKeyedArchiverTransformer" syncable="YES"/>
+        <attribute name="kv" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="medialUrlIos" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mediaUrlAndroid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="menuCode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="miliseconds" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="oboFirstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="oboLastName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="oboPreferredName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pageCount" optional="YES" attributeType="Integer 32" syncable="YES"/>
+        <attribute name="productList" optional="YES" attributeType="Transformable" valueTransformerName="APKeyedArchiverTransformer" syncable="YES"/>
+        <attribute name="productType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pubDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pubId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pubKey" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="refArticleTitle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="refArticleUrl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="region" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="resdataUrl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rnum" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="scale" optional="YES" attributeType="Transformable" valueTransformerName="APKeyedArchiverTransformer" syncable="YES"/>
+        <attribute name="sectors" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="source" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="summary" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="synopsis" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="template" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="themeId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tickers" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="totalCount" optional="YES" attributeType="Integer 32" syncable="YES"/>
+        <attribute name="videoType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="videoUrl" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="CapitalMarketsLogin$AP$" representedClassName="CapitalMarketsLogin$AP$" parentEntity="APInternalObject"  syncable="YES">
+        <attribute name="token" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="CapitalMarketsOrder$AP$" representedClassName="CapitalMarketsOrder$AP$" parentEntity="APInternalObject"  syncable="YES">
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="comments" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="currency" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastPrice" optional="YES" attributeType="Float" syncable="YES"/>
+        <attribute name="lastQty" optional="YES" attributeType="Integer 32" syncable="YES"/>
+        <attribute name="price" optional="YES" attributeType="Float" syncable="YES"/>
+        <attribute name="quantity" optional="YES" attributeType="Integer 32" syncable="YES"/>
+        <attribute name="side" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="symbol" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="transactTime" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="CapitalMarketsRevenue$AP$" representedClassName="CapitalMarketsRevenue$AP$" parentEntity="APInternalObject"  syncable="YES">
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="clientId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="clientName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="clientTier" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="grossComm" optional="YES" attributeType="Float" syncable="YES"/>
+        <attribute name="month" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="productId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="productName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="profitLoss" optional="YES" attributeType="Float" syncable="YES"/>
+        <attribute name="region" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="year" optional="YES" attributeType="Integer 32" syncable="YES"/>
+    </entity>
+    <entity name="CorporatePaymentsAccount$AP$" representedClassName="CorporatePaymentsAccount$AP$" parentEntity="APInternalObject"  syncable="YES">
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="accountName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="baseCurrencyBalances" optional="YES" attributeType="Transformable" valueTransformerName="APKeyedArchiverTransformer" syncable="YES"/>
+        <attribute name="branchName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="countryIsoCode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="localCurrencyIsoCode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="CorporatePaymentsBeneficiary$AP$" representedClassName="CorporatePaymentsBeneficiary$AP$" parentEntity="APInternalObject"  syncable="YES">
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="accountStatus" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="address" optional="YES" attributeType="Transformable" valueTransformerName="APKeyedArchiverTransformer" syncable="YES"/>
+        <attribute name="bankAccountType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="bankAddress" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="bankCountry" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="bic" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="companyName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="country" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="currency" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="entityType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="iban" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="routingCode" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="CorporatePaymentsCrossBorderFxBooking$AP$" representedClassName="CorporatePaymentsCrossBorderFxBooking$AP$" parentEntity="APInternalObject"  syncable="YES">
+        <attribute name="acceptedOn" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="acceptedBy" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rateReference" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="CorporatePaymentsCrossBorderFxPayment$AP$" representedClassName="CorporatePaymentsCrossBorderFxPayment$AP$" parentEntity="APInternalObject"  syncable="YES">
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="beneficiaryAccount" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="beneficiaryAddress" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="beneficiaryBank" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="beneficiaryName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="citiRef" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="createdBy" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="createdOn" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="customerTxnRef" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="debtorAccount" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="debtorAddress" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="debtorName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fromAmount" optional="YES" attributeType="Float" syncable="YES"/>
+        <attribute name="fromCurrency" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="paymentDetails" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rateReference" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="toAmount" optional="YES" attributeType="Float" syncable="YES"/>
+        <attribute name="toCurrency" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="valueDate" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="CorporatePaymentsCrossBorderFxQuote$AP$" representedClassName="CorporatePaymentsCrossBorderFxQuote$AP$" parentEntity="APInternalObject"  syncable="YES">
+        <attribute name="requestedOn" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fromAmount" optional="YES" attributeType="Float" syncable="YES"/>
+        <attribute name="fromCurrency" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rateExpiry" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rateReference" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="requestedBy" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="toAmount" optional="YES" attributeType="Float" syncable="YES"/>
+        <attribute name="toCurrency" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="valueDate" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="CorporatePaymentsLogin$AP$" representedClassName="CorporatePaymentsLogin$AP$" parentEntity="APInternalObject"  syncable="YES">
+        <attribute name="token" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="CorporatePaymentsPayment$AP$" representedClassName="CorporatePaymentsPayment$AP$" parentEntity="APInternalObject"  syncable="YES">
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="beneficiaryId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="branchName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="createdBy" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="createdOn" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="customerReferenceNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="debitAccountName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="debitAccountNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="paymentAmount" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="paymentCurrency" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="paymentDetails" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="paymentMethod" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="paymentType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="transactionReferenceNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="valueDate" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="RetailBankingAccount$AP$" representedClassName="RetailBankingAccount$AP$" parentEntity="APInternalObject"  syncable="YES">
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="accountStatus" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="balances" optional="YES" attributeType="Transformable" valueTransformerName="APKeyedArchiverTransformer" syncable="YES"/>
+        <attribute name="categoryCode" optional="YES" attributeType="Integer 32" syncable="YES"/>
+        <attribute name="copsIndicator" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="detailsExist" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="displayAcctNo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isDestinationAccount" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isSourceAccount" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="msgs" optional="YES" attributeType="Transformable" valueTransformerName="APKeyedArchiverTransformer" syncable="YES"/>
+        <attribute name="offersIndicator" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="productCurrency" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="productDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="productType" optional="YES" attributeType="Integer 32" syncable="YES"/>
+        <attribute name="txnExist" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="RetailBankingAccountBalance$AP$" representedClassName="RetailBankingAccountBalance$AP$" parentEntity="APInternalObject"  syncable="YES">
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="accountId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="balanceType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="value" optional="YES" attributeType="Integer 32" syncable="YES"/>
+    </entity>
+    <entity name="RetailBankingAccountFundTransfer$AP$" representedClassName="RetailBankingAccountFundTransfer$AP$" parentEntity="APInternalObject"  syncable="YES">
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="amount" optional="YES" attributeType="Float" syncable="YES"/>
+        <attribute name="currency" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="destinationAccountId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="destinationId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="memo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="payeeDesc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="payeeId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="payeeType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="paymentType" optional="YES" attributeType="Integer 32" syncable="YES"/>
+        <attribute name="referenceNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="transactionDate" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="RetailBankingAccountTransaction$AP$" representedClassName="RetailBankingAccountTransaction$AP$" parentEntity="APInternalObject"  syncable="YES">
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="accountId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="activity" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="checkImageEligible" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="datePosted" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="formattedAmount" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pendingDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="transactionAmount" optional="YES" attributeType="Float" syncable="YES"/>
+        <attribute name="transactionDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="transactionIdentifier" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="transactionIndex" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="transactionType" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="RetailBankingForeignCurrency$AP$" representedClassName="RetailBankingForeignCurrency$AP$" parentEntity="APInternalObject"  syncable="YES">
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fromCurrency" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rate" optional="YES" attributeType="Float" syncable="YES"/>
+        <attribute name="toCurrency" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="RetailBankingLocation$AP$" representedClassName="RetailBankingLocation$AP$" parentEntity="APInternalObject"  syncable="YES">
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="addressLineOne" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="addressLineTwo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="city" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="comments" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="country" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="externalLink" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="locationType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="phone" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="postalCode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="state" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="RetailBankingLogin$AP$" representedClassName="RetailBankingLogin$AP$" parentEntity="APInternalObject"  syncable="YES">
+        <attribute name="token" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isEligibleForOffers" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isPersonToPersonRequired" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="RetailBankingPayee$AP$" representedClassName="RetailBankingPayee$AP$" parentEntity="APInternalObject"  syncable="YES">
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="addPayeeDetails" optional="YES" attributeType="Transformable" valueTransformerName="APKeyedArchiverTransformer" syncable="YES"/>
+        <attribute name="bankNameExt" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="detailPrefix" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastPaymentAmt" optional="YES" attributeType="Float" syncable="YES"/>
+        <attribute name="payeeAccount" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="payeeDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="payeeListIdTwo" optional="YES" attributeType="Integer 32" syncable="YES"/>
+        <attribute name="payeeListIdType" optional="YES" attributeType="Integer 32" syncable="YES"/>
+        <attribute name="payeeType" optional="YES" attributeType="Integer 32" syncable="YES"/>
+        <attribute name="paymentMethod" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="RetailBankingPayeeType$AP$" representedClassName="RetailBankingPayeeType$AP$" parentEntity="APInternalObject"  syncable="YES">
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="value" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+   <!-- <elements>
+        <element name="MyVal" positionX="160" positionY="192" width="128" height="165"/>
+    </elements> -->
+</model>

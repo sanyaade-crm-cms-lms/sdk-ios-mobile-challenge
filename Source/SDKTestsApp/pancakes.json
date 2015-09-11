@@ -1,0 +1,24 @@
+{
+    "pancakes": {
+        "vegan": [
+            {
+            "id": "1",
+            "couleur": "Blue",
+            "sweetness": "Very",
+            "thickness_in_inches": "1",
+            "others": {
+                  "vegan": "true"
+                  }
+            },
+            {
+            "id": "2",
+            "couleur": "Green",
+            "sweetness": "Not",
+            "thickness_in_inches": "1",
+            "others": {
+                  "vegan": "true"
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,8 @@
+HTTP/1.1 201 Created
+Date: 2015-09-11T17:32:33-04:00
+Status: 201 Created
+Connection: close
+Content-Type: application/json; charset=utf-8
+Content-Length: 623
+
+{"id":"generated_testId","beneficiary_id":"testBeneficiaryId","branch_name":"testBranchName","created_by":"testCreatedBy","created_on":"testCreatedOn","customer_reference_number":"testCustomerReferenceNumber","debit_account_name":"testDebitAccountName","debit_account_number":"testDebitAccountNumber","email":"testEmail","payment_amount":"testPaymentAmount","payment_currency":"testPaymentCurrency","payment_details":"testPaymentDetails","payment_method":"testPaymentMethod","payment_type":"testPaymentType","status":"testStatus","transaction_reference_number":"testTransactionReferenceNumber","value_date":"testValueDate"}

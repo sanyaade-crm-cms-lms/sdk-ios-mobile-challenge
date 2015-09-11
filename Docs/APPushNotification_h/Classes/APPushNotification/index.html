@@ -1,0 +1,581 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/1998/REC-html40-19980424/loose.dtd">
+<html>
+<head>
+<title>APPushNotification</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="generator" content="HeaderDoc">
+<meta name="xcode-display" content="render">
+<style type="text/css"><!--.char {background: #ffffff; color:#0000ff;}.comment {background:#ffffff; color:#236e25}.function {background:#ffffff; color:#000000;}.keyword {background:#ffffff; color:#761550;}.number {background: #ffffff; color:#0000ff;}.param {background:#ffffff; color:#000000;}.preprocessor {background:#ffffff; color:#236e25}.string {background: #ffffff; color:#891315;}.template {background:#ffffff; color:#761550;}.type {background:#ffffff; color:#761550;}.var {background:#ffffff; color:#000000;}body {border: 0px; margin: 0px;}div {font-size: 10pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000;}td {font-size: 10pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000;}span.hd_tocAccessSpace { display: block; font-size: 1px; height: 3px; min-height: 3px; }span.hd_tocGroupSpace { display: block; font-size: 1px; height: 3px; min-height: 3px; }span.hd_tocGroup { display: block; font-weight: bold; font-size: 10pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000; margin-left: 0px; padding-left: 40px; }span.hd_tocGroup + span.hd_tocAccess { padding-top: 5px; }td.toc_contents_text {font-size: 11pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000; }li.tocSubEntry {font-size: 11pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000;}p {font-size: 10pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000;}a:link {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}a:visited {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}a:visited:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}a:active {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}a:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}h2.h2tight { margin-top: 0px; padding-top: 0px; }h1 { margin-top: 13px; padding-top: 0px; }h4 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: tiny; font-weight: bold;}h5 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: 10.1pt; font-weight: bold;}pre {text-decoration: none; font-family: Courier, Consolas, monospace; color: #666; font-size: 10pt;}pre a { font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}pre a:link { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}pre a:visited { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}pre a:visited:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}pre a:active { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}pre a:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code {text-decoration: none; font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}code a { font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}code a:link { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code a:visited { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code a:visited:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code a:active { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code a:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt {text-decoration: none; font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}tt a { font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}tt a:link { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt a:visited { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt a:visited:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt a:active { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt a:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}body  {text-decoration: none; font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt; padding-left: 0px; padding-top: 0px; margin-left: 0px; margin-top: 0px; border: none; }#hd_outermost_table { margin-left: 0px; border-spacing: 0px; margin-top: 0px; padding-left: 0px; padding-top: 0px; border: none; }#hd_outermost_table > tr { border-spacing: 0px; margin-left: 0px; margin-top: 0px; padding-left: 0px; padding-top: 0px; border: none; }#hd_outermost_table > tr > td { border-spacing: 0px; margin-left: 0px; margin-top: 0px; }#hd_outermost_table > tbody > tr { border-spacing: 0px; margin-left: 0px; margin-top: 0px; padding-left: 0px; padding-top: 0px; border: none; }#hd_outermost_table > tbody > tr > td { border-spacing: 0px; margin-left: 0px; margin-top: 0px; padding-top: 3px; }.afterName { display: none; }.list_indent { margin-left: 40px; }.declaration_indent { margin-left: 40px; margin-top: 0px; margin-bottom: 0px; padding-top: 0px; padding-bottom: 0px; min-height: 12px; vertical-align: middle; }.declaration_indent pre { margin-top: 20px; padding-top: 0px; margin-bottom: 20px; padding-bottom: 0px; }.gapBeforeFooter { display: none; }hr { height: 0px; min-height: 0px; border-top: none; border-left: none; border-right: none; border-bottom: 1px solid #909090;}hr.afterHeader { display: none }.param_group_indent { margin-left: 25px; }.param_indent { margin-left: 40px; margin-top: 0px; padding-top: 0px; }.param_indent dl { margin-top: 4px; padding-top: 0px; }dl dd > p:first-child { margin-top: 2px; padding-top: 0px; }.param_indent dl dd > p:first-child { margin-top: 2px; padding-top: 0px; }.group_indent { margin-left: 40px; }.group_desc_indent { margin-left: 20px; }.warning_indent { margin-left: 40px; }.important_indent { margin-left: 40px; }.note_indent { margin-left: 40px; }h3 {       color: #3C4C6C;}.tight {       margin-top: 2px; margin-bottom: 0px;       padding-top: 0px; padding-bottom: 0px;}h3 a {       color: #3C4C6C;	font-size: 16px;	font-style: normal;	font-variant: normal;	font-weight: bold;	height: 0px;	line-height: normal;}.hd_tocAccess { display: block; margin-left: 40px; font-style: italic; font-size: 10px; font-weight: normal; color: #303030; }.tocSubheading { margin-bottom: 4px; }--></style>
+<style><!--
+body {
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+}
+.toc_contents_text {
+    padding-left: 1em;
+    text-indent: -1em;
+}
+
+ul.tocSubEntryList li.tocSubEntry {
+    list-style: none;
+}
+
+#colorbox {
+		display: none;
+}
+.spec_sheet_line {
+		margin-bottom: 1px;
+}
+.collapsible {
+		display: none;
+}
+.toc_leadspace {
+		width: 10; min-width: 10;
+}
+.disclosure_triangle_td {
+		width: 14; min-width: 14;
+		font-size: 10px;
+		vertical-align: middle;
+}
+.specbox td {
+		font-size: 13px;
+}
+.specbox td a {
+		font-size: 13px;
+}
+.specbox td code {
+		font-size: 13px;
+}
+.specbox td tt {
+		font-size: 13px;
+}
+.specbox td pre {
+		font-size: 13px;
+}
+.specbox a {
+		font-size: 12px;
+}
+.disclosure_triangle_td a {
+		text-decoration: none;
+}
+.disclosure_triangle_td a:link {
+		text-decoration: none;
+}
+.disclosure_triangle_td a:active {
+		text-decoration: none;
+}
+.disclosure_triangle_td a:visited:hover {
+		text-decoration: none;
+}
+.disclosure_triangle_td a:hover {
+		text-decoration: none;
+}
+.hd_toc_box {
+		padding-top: 10px;
+		padding-right: 15px;
+}.tocSeparator {
+		margin-top: 15px;
+		padding-bottom: 0px;
+		margin-bottom: 0px;
+}
+.tocSubEntryList {
+		margin-left: 0px;
+		padding-left: 40px;
+		padding-top: 0px;
+		margin-top: 2px;
+		padding-bottom: 0px;
+		margin-bottom: 8px;
+}
+.hd_toc_heading_table {
+		margin-top: 2px;
+		margin-bottom: 2px;
+}
+.hd_toc_entry_table {
+		margin-top: 2px;
+		margin-bottom: 2px;
+}
+.tocSubEntry {
+		margin-left: 0px;
+		padding-left: 0px;
+		margin-top: 0px;
+		margin-bottom: 1px;
+}
+.tocSubEntry a {
+		font-size: 10pt;
+}
+.tocSubheading {
+		padding-left: 14px;
+		margin-left: 0px;
+		margin-top: 5px;
+		padding-top: 0px;
+		font-size: 16px;
+		color: #808080;
+}
+
+#hd_outermost_table { margin-left: 0px; border-spacing: 0px; margin-top: 0px; padding-left: 0px; padding-top: 0px; border: none; }
+#hd_outermost_table > tr { border-spacing: 0px; margin-left: 0px; margin-top: 0px; padding-left: 0px; padding-top: 0px; border: none; }
+#hd_outermost_table > tr > td { border-spacing: 0px; margin-left: 0px; margin-top: 0px; }
+#hd_outermost_table > tbody > tr { border-spacing: 0px; margin-left: 0px; margin-top: 0px; padding-left: 0px; padding-top: 0px; border: none; }
+#hd_outermost_table > tbody > tr > td { border-spacing: 0px; margin-left: 0px; margin-top: 0px; padding-top: 3px; }
+
+#tocMenu {
+		border-right: 1px solid #c0c0c0;
+		background-color: #f4f4ff;
+		top:0px;
+		left:0px;
+		width:230px;
+		height:100%;
+}
+#bodyContents {
+		width: auto;
+		padding-left: 15px;
+}
+--></style>
+<style id="disable_before_iOS_5"><!--
+#tocMenu {
+		position: fixed;
+		height: 100%;
+		overflow: auto;
+}
+#bodyContents {
+		width: auto;
+		left: 235px;
+		right: 0;
+		padding-left: 15px;
+		position: fixed;
+		height: 100%;
+		overflow-y: scroll;
+}
+--></style>
+<script language="JavaScript" type="text/javascript"><!--
+    if (navigator.platform && (navigator.platform.match(/iPad/) || navigator.platform.match(/iPhone/) || navigator.platform.match(/iPod/))) {
+        if (navigator.userAgent.match(/OS 1(_\d)+/) ||
+            navigator.userAgent.match(/OS 2(_\d)+/) ||
+            navigator.userAgent.match(/OS 3(_\d)+/) ||
+            navigator.userAgent.match(/OS 4(_\d)+/)) {
+                /* Earlier iOS versions require different scrolling gestures with position: fixed. */
+                var del_style_elt = document.getElementById("disable_before_iOS_5");
+                if (del_style_elt) del_style_elt.parentNode.removeChild(del_style_elt);
+        }
+    }
+// --></script><script language="JavaScript" type="text/javascript"><!--
+function getNewHTTPObject()
+{
+        var xmlhttp;
+
+        /** Special IE only code ... */
+        /*@cc_on
+          @if (@_jscript_version >= 5)
+              try
+              {
+                  xmlhttp = new ActiveXObject('Msxml2.XMLHTTP');
+              }
+              catch (e)
+              {
+                  try
+                  {
+                      xmlhttp = new ActiveXObject('Microsoft.XMLHTTP');
+                  }
+                  catch (E)
+                  {
+                      xmlhttp = false;
+                  }
+             }
+          @else
+             xmlhttp = false;
+        @end @*/
+
+        /** Every other browser on the planet */
+        if (!xmlhttp && typeof XMLHttpRequest != 'undefined')
+        {
+            try
+            {
+                xmlhttp = new XMLHttpRequest();
+            }
+            catch (e)
+            {
+                xmlhttp = false;
+            }
+        }
+
+        return xmlhttp;
+}
+
+function hidetoc() {
+	var toc = document.getElementById('tocMenu');
+	var src = toc.getAttribute('src');
+	var xhr = getNewHTTPObject();
+	xhr.open('GET', src, true);
+	xhr.onreadystatechange = function() {
+		if(xhr.readyState == 4) {
+			var toc = document.getElementById('tocMenu');
+			toc.innerHTML = xhr.responseText;
+		}
+	}
+	xhr.send(null);
+	var origURL = parent.document.URL;
+	var contentURL = origURL.substring(origURL.indexOf('?')+1, origURL.length);
+	if (contentURL.length == origURL.length) {
+		jumpPos = origURL.substring(origURL.indexOf('#')+1, origURL.length);
+	}
+	if (contentURL == "hidetoc") {
+		var body = document.getElementById('bodyContents');
+		if (toc && body) {
+			toc.style.display = 'none';
+			body.style.marginLeft = '0px';
+		}
+	}
+}
+
+function disclosure_triangle(elt) {
+   var linkelt = elt;
+   while (elt && elt.tagName != 'TABLE') { elt = elt.parentNode;}
+   if (!elt) { return; }
+   while (elt && elt.tagName != 'DIV') { elt = elt.nextSibling;}
+   if (!elt) { return; }
+   if (parseInt(linkelt.getAttribute('state'))) {
+      // It's open.  Close it
+      linkelt.innerHTML = '&#x25B7;';
+      linkelt.setAttribute('state', 0);
+      linkelt.setAttribute('class', 'closed_disclosure_triangle');
+      elt.style.display = 'none';
+   } else {
+      // It's closed.  Open it
+      linkelt.innerHTML = '&#x25BC;';
+      linkelt.setAttribute('state', 1);
+      linkelt.setAttribute('class', 'open_disclosure_triangle');
+      elt.style.display = 'block';
+   }
+}
+--></script><style type="text/css"><!--.char {background: #ffffff; color:#0000ff;}.comment {background:#ffffff; color:#236e25}.function {background:#ffffff; color:#000000;}.keyword {background:#ffffff; color:#761550;}.number {background: #ffffff; color:#0000ff;}.param {background:#ffffff; color:#000000;}.preprocessor {background:#ffffff; color:#236e25}.string {background: #ffffff; color:#891315;}.template {background:#ffffff; color:#761550;}.type {background:#ffffff; color:#761550;}.var {background:#ffffff; color:#000000;}body {border: 0px; margin: 0px;}div {font-size: 10pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000;}td {font-size: 10pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000;}span.hd_tocAccessSpace { display: block; font-size: 1px; height: 3px; min-height: 3px; }span.hd_tocGroupSpace { display: block; font-size: 1px; height: 3px; min-height: 3px; }span.hd_tocGroup { display: block; font-weight: bold; font-size: 10pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000; margin-left: 0px; padding-left: 40px; }span.hd_tocGroup + span.hd_tocAccess { padding-top: 5px; }td.toc_contents_text {font-size: 11pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000; }li.tocSubEntry {font-size: 11pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000;}p {font-size: 10pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000;}a:link {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}a:visited {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}a:visited:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}a:active {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}a:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}h2.h2tight { margin-top: 0px; padding-top: 0px; }h1 { margin-top: 13px; padding-top: 0px; }h4 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: tiny; font-weight: bold;}h5 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: 10.1pt; font-weight: bold;}pre {text-decoration: none; font-family: Courier, Consolas, monospace; color: #666; font-size: 10pt;}pre a { font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}pre a:link { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}pre a:visited { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}pre a:visited:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}pre a:active { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}pre a:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code {text-decoration: none; font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}code a { font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}code a:link { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code a:visited { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code a:visited:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code a:active { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code a:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt {text-decoration: none; font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}tt a { font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}tt a:link { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt a:visited { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt a:visited:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt a:active { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt a:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}body  {text-decoration: none; font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt; padding-left: 0px; padding-top: 0px; margin-left: 0px; margin-top: 0px; border: none; }#hd_outermost_table { margin-left: 0px; border-spacing: 0px; margin-top: 0px; padding-left: 0px; padding-top: 0px; border: none; }#hd_outermost_table > tr { border-spacing: 0px; margin-left: 0px; margin-top: 0px; padding-left: 0px; padding-top: 0px; border: none; }#hd_outermost_table > tr > td { border-spacing: 0px; margin-left: 0px; margin-top: 0px; }#hd_outermost_table > tbody > tr { border-spacing: 0px; margin-left: 0px; margin-top: 0px; padding-left: 0px; padding-top: 0px; border: none; }#hd_outermost_table > tbody > tr > td { border-spacing: 0px; margin-left: 0px; margin-top: 0px; padding-top: 3px; }.afterName { display: none; }.list_indent { margin-left: 40px; }.declaration_indent { margin-left: 40px; margin-top: 0px; margin-bottom: 0px; padding-top: 0px; padding-bottom: 0px; min-height: 12px; vertical-align: middle; }.declaration_indent pre { margin-top: 20px; padding-top: 0px; margin-bottom: 20px; padding-bottom: 0px; }.gapBeforeFooter { display: none; }hr { height: 0px; min-height: 0px; border-top: none; border-left: none; border-right: none; border-bottom: 1px solid #909090;}hr.afterHeader { display: none }.param_group_indent { margin-left: 25px; }.param_indent { margin-left: 40px; margin-top: 0px; padding-top: 0px; }.param_indent dl { margin-top: 4px; padding-top: 0px; }dl dd > p:first-child { margin-top: 2px; padding-top: 0px; }.param_indent dl dd > p:first-child { margin-top: 2px; padding-top: 0px; }.group_indent { margin-left: 40px; }.group_desc_indent { margin-left: 20px; }.warning_indent { margin-left: 40px; }.important_indent { margin-left: 40px; }.note_indent { margin-left: 40px; }h3 {       color: #3C4C6C;}.tight {       margin-top: 2px; margin-bottom: 0px;       padding-top: 0px; padding-bottom: 0px;}h3 a {       color: #3C4C6C;	font-size: 16px;	font-style: normal;	font-variant: normal;	font-weight: bold;	height: 0px;	line-height: normal;}.hd_tocAccess { display: block; margin-left: 40px; font-style: italic; font-size: 10px; font-weight: normal; color: #303030; }.tocSubheading { margin-bottom: 4px; }--></style>
+</head>
+<body bgcolor="#ffffff" onload="hidetoc();">
+<!-- headerDoc=cl; uid=//apple_ref/occ/cl/APPushNotification;  name=APPushNotification-->
+<a name="//apple_ref/occ/cl/APPushNotification"></a><table id="hd_outermost_table" height="100%" width="100%"><tr>
+<td valign="top" id="tocMenu" src="toc.html"></td>
+<td id="bodyContents" valign="top">
+<a name="top"></a>
+<h1><a name="APPushNotification">APPushNotification</a></h1>
+<div class="spec_sheet_info_box"><table cellspacing="0" class="specbox">
+<tr>
+<td scope="row"><b>Superclass:</b></td>
+<td><div style="margin-bottom:1px"><div class="content_text">
+<!-- a logicalPath="//apple_ref/occ/cl/NSObject" machineGenerated="true" -->NSObject<!-- /a -->
+</div></div></td>
+</tr>
+<tr>
+<td scope="row"><b>Declared In:</b></td>
+<td><div style="margin-bottom:1px"><div class="content_text"><a logicalpath="//apple_ref/doc/header/APPushNotification.h" target="_top" machinegenerated="true" href="../../index.html#//apple_ref/doc/header/APPushNotification.h">APPushNotification.h</a></div></div></td>
+</tr>
+</table></div>
+<h2>Introduction</h2>
+<p><!-- headerDoc=abstract;uid=//apple_ref/occ/cl/APPushNotification;name=start --><!-- begin abstract --></p>
+<p>Provides the means to register devices/channels and ability to send messages through APNS.
+<!-- end abstract --><!-- headerDoc=abstract;uid=//apple_ref/occ/cl/APPushNotification;name=end --></p>
+<hr class="afterClassOrHeaderInfo">
+<br><a name="HeaderDoc_methods"></a>
+<h2 class="h2tight">Methods</h2>
+<dl>
+<dt><tt><a href="index.html#//apple_ref/occ/clm/APPushNotification/registerDevice:callback:" target="_top">+registerDevice:callback:</a></tt></dt>
+<dd><p>Registers a device to push notifications
+</p></dd>
+<dt><tt><a href="index.html#//apple_ref/doc/title:clm/APPushNotification/sendMessage:channelName:data:callback:" target="_top">+sendMessage:channelName:data:callback:</a></tt></dt>
+<dd><p>Sends a message to a desired channel.
+</p></dd>
+<dt><tt><a href="index.html#//apple_ref/occ/clm/APPushNotification/sendMessage:channelName:iOSData:androidData:callback:" target="_top">+sendMessage:channelName:iOSData:androidData:callback:</a></tt></dt>
+<dd><p>Sends a message to a desired channel.
+</p></dd>
+<dt><tt><a href="index.html#//apple_ref/occ/clm/APPushNotification/subscribeToChannel:deviceId:callback:" target="_top">+subscribeToChannel:deviceId:callback:</a></tt></dt>
+<dd><p>Subscribes to channel.
+</p></dd>
+<dt><tt><a href="index.html#//apple_ref/occ/clm/APPushNotification/unregisterDevice:callback:" target="_top">+unregisterDevice:callback:</a></tt></dt>
+<dd><p>Unregisters a device from push notifications.
+</p></dd>
+<dt><tt><a href="index.html#//apple_ref/occ/clm/APPushNotification/unsubscribeFromChannel:deviceId:callback:" target="_top">+unsubscribeFromChannel:deviceId:callback:</a></tt></dt>
+<dd><p>Unsubcribes from a channel.
+</p></dd>
+<dt><tt><a href="index.html#//apple_ref/doc/title:clm/APPushNotification/unsubscribeToChannel:deviceId:callback:" target="_top">+unsubscribeToChannel:deviceId:callback:</a></tt></dt>
+<dd><p>Unsubcribes from a channel.
+</p></dd>
+</dl>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=clm;  uid=//apple_ref/occ/clm/APPushNotification/registerDevice:callback:;   name=APPushNotification::registerDevice:callback: --><a name="//apple_ref/occ/clm/APPushNotification/registerDevice:callback:"></a>
+<h3><a name="registerDevice:callback:">registerDevice:callback:</a></h3>
+<hr class="afterName">
+<p><!-- headerDoc=abstract;uid=//apple_ref/occ/clm/APPushNotification/registerDevice:callback:;name=start --><!-- begin abstract --></p>
+<p>Registers a device to push notifications
+<!-- end abstract --><!-- headerDoc=abstract;uid=//apple_ref/occ/clm/APPushNotification/registerDevice:callback:;name=end --></p>
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/occ/clm/APPushNotification/registerDevice:callback:;name=start -->+ (<!-- a logicalPath="//apple_ref/occ/cl/void //apple_ref/occ/tdef/void //apple_ref/occ/tag/void //apple_ref/occ/struct/void //apple_ref/occ/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a -->)<a machinegenerated="true" href="index.html#//apple_ref/occ/clm/APPushNotification/registerDevice:callback:" logicalPath="//apple_ref/occ/instm/APPushNotification/registerDevice //apple_ref/occ/clm/APPushNotification/registerDevice" target="_top"><span class="function">registerDevice</span></a>:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/intf/NSString //apple_ref/doc/anysymbol/NSString" machineGenerated="true" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<span class="param">deviceId</span> <a machinegenerated="true" href="index.html#//apple_ref/doc/methodparam/APPushNotification/unsubscribeToChannel:deviceId:callback:/callback" logicalPath="//apple_ref/occ/instm/APPushNotification/callback //apple_ref/occ/clm/APPushNotification/callback //apple_ref/occ/intfcm/APPushNotification/callback //apple_ref/occ/intfm/APPushNotification/callback //apple_ref/occ/func/callback //apple_ref/occ/ftmplt/APPushNotification/callback //apple_ref/occ/defn/callback //apple_ref/occ/macro/callback //apple_ref/doc/anysymbol/callback" target="_top"><span class="function">callback</span></a>:(<a machinegenerated="true" href="../../../Typedefs_h/index.html#//apple_ref/c/tdef/APPushCallback" logicalPath="//apple_ref/occ/cl/APPushCallback //apple_ref/occ/tdef/APPushCallback" target="_top"><span class="type">APPushCallback</span></a>)<!-- a logicalPath="//apple_ref/occ/econst/callback //apple_ref/occ/data/APPushNotification/callback //apple_ref/occ/data/callback //apple_ref/occ/clconst/APPushNotification/callback " machineGenerated="true" --><span class="var">callback</span><!-- /a -->; <!-- headerDoc=declaration;uid=//apple_ref/occ/clm/APPushNotification/registerDevice:callback:;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt>
+<!-- headerDoc=methodparam;  uid=//apple_ref/doc/methodparam/APPushNotification/registerDevice:callback:/deviceId;   name=registerDevice:callback:::deviceId -->
+<a name="//apple_ref/doc/methodparam/APPushNotification/registerDevice:callback:/deviceId"></a>
+<code>deviceId</code>
+</dt>
+<dd><p>Device identifier. Nil values and empty strings will cause a failed response upon request completion.</p></dd>
+<dt>
+<!-- headerDoc=methodparam;  uid=//apple_ref/doc/methodparam/APPushNotification/registerDevice:callback:/callback;   name=registerDevice:callback:::callback -->
+<a name="//apple_ref/doc/methodparam/APPushNotification/registerDevice:callback:/callback"></a>
+<code>callback</code>
+</dt>
+<dd><p>Callback to be execute after registration request is complete.</p></dd>
+</dl>
+</div>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=title:clm;  uid=//apple_ref/doc/title:clm/APPushNotification/sendMessage:channelName:data:callback:;   name=APPushNotification::sendMessage:channelName:data:callback: --><a name="//apple_ref/doc/title:clm/APPushNotification/sendMessage:channelName:data:callback:"></a>
+<h3><a name="sendMessage:channelName:data:callback:">sendMessage:channelName:data:callback:</a></h3>
+<hr class="afterName">
+<p><!-- headerDoc=abstract;uid=//apple_ref/doc/title:clm/APPushNotification/sendMessage:channelName:data:callback:;name=start --><!-- begin abstract --></p>
+<p>Sends a message to a desired channel.
+<!-- end abstract --><!-- headerDoc=abstract;uid=//apple_ref/doc/title:clm/APPushNotification/sendMessage:channelName:data:callback:;name=end --></p>
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/doc/title:clm/APPushNotification/sendMessage:channelName:data:callback:;name=start -->+ (<!-- a logicalPath="//apple_ref/occ/cl/void //apple_ref/occ/tdef/void //apple_ref/occ/tag/void //apple_ref/occ/struct/void //apple_ref/occ/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a -->)<a machinegenerated="true" href="index.html#//apple_ref/occ/clm/APPushNotification/sendMessage:channelName:iOSData:androidData:callback:" logicalPath="//apple_ref/occ/instm/APPushNotification/sendMessage //apple_ref/occ/clm/APPushNotification/sendMessage" target="_top"><span class="function">sendMessage</span></a>:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/intf/NSString //apple_ref/doc/anysymbol/NSString" machineGenerated="true" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<span class="param">payload</span> <a machinegenerated="true" href="index.html#//apple_ref/doc/methodparam/APPushNotification/unsubscribeToChannel:deviceId:callback:/channelName" logicalPath="//apple_ref/occ/instm/APPushNotification/channelName //apple_ref/occ/clm/APPushNotification/channelName //apple_ref/occ/intfcm/APPushNotification/channelName //apple_ref/occ/intfm/APPushNotification/channelName //apple_ref/occ/func/channelName //apple_ref/occ/ftmplt/APPushNotification/channelName //apple_ref/occ/defn/channelName //apple_ref/occ/macro/channelName //apple_ref/doc/anysymbol/channelName" target="_top"><span class="function">channelName</span></a>:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/intf/NSString //apple_ref/doc/anysymbol/NSString" machineGenerated="true" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<span class="param">channelName</span> 
+        <a machinegenerated="true" href="index.html#//apple_ref/doc/methodparam/APPushNotification/sendMessage:channelName:iOSData:androidData:callback:/iOSData" logicalPath="//apple_ref/occ/instm/APPushNotification/iOSData //apple_ref/occ/clm/APPushNotification/iOSData //apple_ref/occ/intfcm/APPushNotification/iOSData //apple_ref/occ/intfm/APPushNotification/iOSData //apple_ref/occ/func/iOSData //apple_ref/occ/ftmplt/APPushNotification/iOSData //apple_ref/occ/defn/iOSData //apple_ref/occ/macro/iOSData //apple_ref/doc/anysymbol/iOSData" target="_top"><span class="function">iOSData</span></a>:(<a machinegenerated="true" href="../../../APPushNotificationIOSData_h/Classes/APPushNotificationIOSData/index.html#//apple_ref/occ/cl/APPushNotificationIOSData" logicalPath="//apple_ref/occ/cl/APPushNotificationIOSData" target="_top"><span class="type">APPushNotificationIOSData</span></a> <span class="type">*</span>)<span class="param">iOSData</span> <a machinegenerated="true" href="index.html#//apple_ref/doc/methodparam/APPushNotification/sendMessage:channelName:iOSData:androidData:callback:/androidData" logicalPath="//apple_ref/occ/instm/APPushNotification/androidData //apple_ref/occ/clm/APPushNotification/androidData //apple_ref/occ/intfcm/APPushNotification/androidData //apple_ref/occ/intfm/APPushNotification/androidData //apple_ref/occ/func/androidData //apple_ref/occ/ftmplt/APPushNotification/androidData //apple_ref/occ/defn/androidData //apple_ref/occ/macro/androidData //apple_ref/doc/anysymbol/androidData" target="_top"><span class="function">androidData</span></a>:(<a machinegenerated="true" href="../../../APPushNotificationAndroidData_h/Classes/APPushNotificationAndroidData/index.html#//apple_ref/occ/cl/APPushNotificationAndroidData" logicalPath="//apple_ref/occ/cl/APPushNotificationAndroidData" target="_top"><span class="type">APPushNotificationAndroidData</span></a> <span class="type">*</span>)<span class="param">androidData</span> 
+        <a machinegenerated="true" href="index.html#//apple_ref/doc/methodparam/APPushNotification/unsubscribeToChannel:deviceId:callback:/callback" logicalPath="//apple_ref/occ/instm/APPushNotification/callback //apple_ref/occ/clm/APPushNotification/callback //apple_ref/occ/intfcm/APPushNotification/callback //apple_ref/occ/intfm/APPushNotification/callback //apple_ref/occ/func/callback //apple_ref/occ/ftmplt/APPushNotification/callback //apple_ref/occ/defn/callback //apple_ref/occ/macro/callback //apple_ref/doc/anysymbol/callback" target="_top"><span class="function">callback</span></a>:(<a machinegenerated="true" href="../../../Typedefs_h/index.html#//apple_ref/c/tdef/APPushCallback" logicalPath="//apple_ref/occ/cl/APPushCallback //apple_ref/occ/tdef/APPushCallback" target="_top"><span class="type">APPushCallback</span></a>)<!-- a logicalPath="//apple_ref/occ/econst/callback //apple_ref/occ/data/APPushNotification/callback //apple_ref/occ/data/callback //apple_ref/occ/clconst/APPushNotification/callback " machineGenerated="true" --><span class="var">callback</span><!-- /a -->; <!-- headerDoc=declaration;uid=//apple_ref/doc/title:clm/APPushNotification/sendMessage:channelName:data:callback:;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt>
+<!-- headerDoc=methodparam;  uid=//apple_ref/doc/methodparam/APPushNotification/sendMessage:channelName:data:callback:/payload;   name=sendMessage:channelName:data:callback:::payload -->
+<a name="//apple_ref/doc/methodparam/APPushNotification/sendMessage:channelName:data:callback:/payload"></a>
+<code>payload</code>
+</dt>
+<dd><p>Message to be sent.</p></dd>
+<dt>
+<!-- headerDoc=methodparam;  uid=//apple_ref/doc/methodparam/APPushNotification/sendMessage:channelName:data:callback:/channelName;   name=sendMessage:channelName:data:callback:::channelName -->
+<a name="//apple_ref/doc/methodparam/APPushNotification/sendMessage:channelName:data:callback:/channelName"></a>
+<code>channelName</code>
+</dt>
+<dd><p>Name of subscribed channel to which message is to be sent. Nil values and empty strings will cause a failed response upon request completion.</p></dd>
+<dt>
+<!-- headerDoc=methodparam;  uid=//apple_ref/doc/methodparam/APPushNotification/sendMessage:channelName:data:callback:/iOSData;   name=sendMessage:channelName:data:callback:::iOSData -->
+<a name="//apple_ref/doc/methodparam/APPushNotification/sendMessage:channelName:data:callback:/iOSData"></a>
+<code>iOSData</code>
+</dt>
+<dd><p>Object containing alert, sound, badge and expiry information for use with APNS messages.</p></dd>
+<dt>
+<!-- headerDoc=methodparam;  uid=//apple_ref/doc/methodparam/APPushNotification/sendMessage:channelName:data:callback:/androidData;   name=sendMessage:channelName:data:callback:::androidData -->
+<a name="//apple_ref/doc/methodparam/APPushNotification/sendMessage:channelName:data:callback:/androidData"></a>
+<code>androidData</code>
+</dt>
+<dd><p>Object containing collapse key, delay and TTL information for use with GSM messages.</p></dd>
+<dt>
+<!-- headerDoc=methodparam;  uid=//apple_ref/doc/methodparam/APPushNotification/sendMessage:channelName:data:callback:/callback;   name=sendMessage:channelName:data:callback:::callback -->
+<a name="//apple_ref/doc/methodparam/APPushNotification/sendMessage:channelName:data:callback:/callback"></a>
+<code>callback</code>
+</dt>
+<dd><p>Callback to be execute after message request is complete.</p></dd>
+</dl>
+</div>
+<p><b>See Also</b></p>
+<div class="list_indent"><dl>
+<dt><p><a href="index.html#//apple_ref/occ/clm/APPushNotification/sendMessage:channelName:iOSData:androidData:callback:" logicalPath="//apple_ref/occ/clm/APPushNotification/sendMessage:channelName:iOSData:androidData:callback:" target="_top">sendMessage:channelName:iOSData:androidData:callback:</a></p></dt>
+<dd></dd>
+</dl></div>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=clm;  uid=//apple_ref/occ/clm/APPushNotification/sendMessage:channelName:iOSData:androidData:callback:;   name=APPushNotification::sendMessage:channelName:iOSData:androidData:callback: --><a name="//apple_ref/occ/clm/APPushNotification/sendMessage:channelName:iOSData:androidData:callback:"></a>
+<h3><a name="sendMessage:channelName:iOSData:androidData:callback:">sendMessage:channelName:iOSData:androidData:callback:</a></h3>
+<hr class="afterName">
+<p><!-- headerDoc=abstract;uid=//apple_ref/occ/clm/APPushNotification/sendMessage:channelName:iOSData:androidData:callback:;name=start --><!-- begin abstract --></p>
+<p>Sends a message to a desired channel.
+<!-- end abstract --><!-- headerDoc=abstract;uid=//apple_ref/occ/clm/APPushNotification/sendMessage:channelName:iOSData:androidData:callback:;name=end --></p>
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/occ/clm/APPushNotification/sendMessage:channelName:iOSData:androidData:callback:;name=start -->+ (<!-- a logicalPath="//apple_ref/occ/cl/void //apple_ref/occ/tdef/void //apple_ref/occ/tag/void //apple_ref/occ/struct/void //apple_ref/occ/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a -->)<a machinegenerated="true" href="index.html#//apple_ref/occ/clm/APPushNotification/sendMessage:channelName:iOSData:androidData:callback:" logicalPath="//apple_ref/occ/instm/APPushNotification/sendMessage //apple_ref/occ/clm/APPushNotification/sendMessage" target="_top"><span class="function">sendMessage</span></a>:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/intf/NSString //apple_ref/doc/anysymbol/NSString" machineGenerated="true" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<span class="param">payload</span> <a machinegenerated="true" href="index.html#//apple_ref/doc/methodparam/APPushNotification/unsubscribeToChannel:deviceId:callback:/channelName" logicalPath="//apple_ref/occ/instm/APPushNotification/channelName //apple_ref/occ/clm/APPushNotification/channelName //apple_ref/occ/intfcm/APPushNotification/channelName //apple_ref/occ/intfm/APPushNotification/channelName //apple_ref/occ/func/channelName //apple_ref/occ/ftmplt/APPushNotification/channelName //apple_ref/occ/defn/channelName //apple_ref/occ/macro/channelName //apple_ref/doc/anysymbol/channelName" target="_top"><span class="function">channelName</span></a>:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/intf/NSString //apple_ref/doc/anysymbol/NSString" machineGenerated="true" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<span class="param">channelName</span> 
+        <a machinegenerated="true" href="index.html#//apple_ref/doc/methodparam/APPushNotification/sendMessage:channelName:iOSData:androidData:callback:/iOSData" logicalPath="//apple_ref/occ/instm/APPushNotification/iOSData //apple_ref/occ/clm/APPushNotification/iOSData //apple_ref/occ/intfcm/APPushNotification/iOSData //apple_ref/occ/intfm/APPushNotification/iOSData //apple_ref/occ/func/iOSData //apple_ref/occ/ftmplt/APPushNotification/iOSData //apple_ref/occ/defn/iOSData //apple_ref/occ/macro/iOSData //apple_ref/doc/anysymbol/iOSData" target="_top"><span class="function">iOSData</span></a>:(<a machinegenerated="true" href="../../../APPushNotificationIOSData_h/Classes/APPushNotificationIOSData/index.html#//apple_ref/occ/cl/APPushNotificationIOSData" logicalPath="//apple_ref/occ/cl/APPushNotificationIOSData" target="_top"><span class="type">APPushNotificationIOSData</span></a> <span class="type">*</span>)<span class="param">iOSData</span> <a machinegenerated="true" href="index.html#//apple_ref/doc/methodparam/APPushNotification/sendMessage:channelName:iOSData:androidData:callback:/androidData" logicalPath="//apple_ref/occ/instm/APPushNotification/androidData //apple_ref/occ/clm/APPushNotification/androidData //apple_ref/occ/intfcm/APPushNotification/androidData //apple_ref/occ/intfm/APPushNotification/androidData //apple_ref/occ/func/androidData //apple_ref/occ/ftmplt/APPushNotification/androidData //apple_ref/occ/defn/androidData //apple_ref/occ/macro/androidData //apple_ref/doc/anysymbol/androidData" target="_top"><span class="function">androidData</span></a>:(<a machinegenerated="true" href="../../../APPushNotificationAndroidData_h/Classes/APPushNotificationAndroidData/index.html#//apple_ref/occ/cl/APPushNotificationAndroidData" logicalPath="//apple_ref/occ/cl/APPushNotificationAndroidData" target="_top"><span class="type">APPushNotificationAndroidData</span></a> <span class="type">*</span>)<span class="param">androidData</span> 
+        <a machinegenerated="true" href="index.html#//apple_ref/doc/methodparam/APPushNotification/unsubscribeToChannel:deviceId:callback:/callback" logicalPath="//apple_ref/occ/instm/APPushNotification/callback //apple_ref/occ/clm/APPushNotification/callback //apple_ref/occ/intfcm/APPushNotification/callback //apple_ref/occ/intfm/APPushNotification/callback //apple_ref/occ/func/callback //apple_ref/occ/ftmplt/APPushNotification/callback //apple_ref/occ/defn/callback //apple_ref/occ/macro/callback //apple_ref/doc/anysymbol/callback" target="_top"><span class="function">callback</span></a>:(<a machinegenerated="true" href="../../../Typedefs_h/index.html#//apple_ref/c/tdef/APPushCallback" logicalPath="//apple_ref/occ/cl/APPushCallback //apple_ref/occ/tdef/APPushCallback" target="_top"><span class="type">APPushCallback</span></a>)<!-- a logicalPath="//apple_ref/occ/econst/callback //apple_ref/occ/data/APPushNotification/callback //apple_ref/occ/data/callback //apple_ref/occ/clconst/APPushNotification/callback " machineGenerated="true" --><span class="var">callback</span><!-- /a -->; <!-- headerDoc=declaration;uid=//apple_ref/occ/clm/APPushNotification/sendMessage:channelName:iOSData:androidData:callback:;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt>
+<!-- headerDoc=methodparam;  uid=//apple_ref/doc/methodparam/APPushNotification/sendMessage:channelName:iOSData:androidData:callback:/payload;   name=sendMessage:channelName:iOSData:androidData:callback:::payload -->
+<a name="//apple_ref/doc/methodparam/APPushNotification/sendMessage:channelName:iOSData:androidData:callback:/payload"></a>
+<code>payload</code>
+</dt>
+<dd><p>Message to be sent.</p></dd>
+<dt>
+<!-- headerDoc=methodparam;  uid=//apple_ref/doc/methodparam/APPushNotification/sendMessage:channelName:iOSData:androidData:callback:/channelName;   name=sendMessage:channelName:iOSData:androidData:callback:::channelName -->
+<a name="//apple_ref/doc/methodparam/APPushNotification/sendMessage:channelName:iOSData:androidData:callback:/channelName"></a>
+<code>channelName</code>
+</dt>
+<dd><p>Name of subscribed channel to which message is to be sent. Nil values and empty strings will cause a failed response upon request completion.</p></dd>
+<dt>
+<!-- headerDoc=methodparam;  uid=//apple_ref/doc/methodparam/APPushNotification/sendMessage:channelName:iOSData:androidData:callback:/iOSData;   name=sendMessage:channelName:iOSData:androidData:callback:::iOSData -->
+<a name="//apple_ref/doc/methodparam/APPushNotification/sendMessage:channelName:iOSData:androidData:callback:/iOSData"></a>
+<code>iOSData</code>
+</dt>
+<dd><p>Object containing alert, sound, badge and expiry information for use with APNS messages.</p></dd>
+<dt>
+<!-- headerDoc=methodparam;  uid=//apple_ref/doc/methodparam/APPushNotification/sendMessage:channelName:iOSData:androidData:callback:/androidData;   name=sendMessage:channelName:iOSData:androidData:callback:::androidData -->
+<a name="//apple_ref/doc/methodparam/APPushNotification/sendMessage:channelName:iOSData:androidData:callback:/androidData"></a>
+<code>androidData</code>
+</dt>
+<dd><p>Object containing collapse key, delay and TTL information for use with GSM messages.</p></dd>
+<dt>
+<!-- headerDoc=methodparam;  uid=//apple_ref/doc/methodparam/APPushNotification/sendMessage:channelName:iOSData:androidData:callback:/callback;   name=sendMessage:channelName:iOSData:androidData:callback:::callback -->
+<a name="//apple_ref/doc/methodparam/APPushNotification/sendMessage:channelName:iOSData:androidData:callback:/callback"></a>
+<code>callback</code>
+</dt>
+<dd><p>Callback to be execute after message request is complete.</p></dd>
+</dl>
+</div>
+<p><b>See Also</b></p>
+<div class="list_indent"><dl>
+<dt><p><a href="index.html#//apple_ref/doc/title:clm/APPushNotification/sendMessage:channelName:data:callback:" logicalPath="//apple_ref/doc/title:clm/APPushNotification/sendMessage:channelName:data:callback:" target="_top">sendMessage:channelName:data:callback:</a></p></dt>
+<dd></dd>
+</dl></div>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=clm;  uid=//apple_ref/occ/clm/APPushNotification/subscribeToChannel:deviceId:callback:;   name=APPushNotification::subscribeToChannel:deviceId:callback: --><a name="//apple_ref/occ/clm/APPushNotification/subscribeToChannel:deviceId:callback:"></a>
+<h3><a name="subscribeToChannel:deviceId:callback:">subscribeToChannel:deviceId:callback:</a></h3>
+<hr class="afterName">
+<p><!-- headerDoc=abstract;uid=//apple_ref/occ/clm/APPushNotification/subscribeToChannel:deviceId:callback:;name=start --><!-- begin abstract --></p>
+<p>Subscribes to channel.
+<!-- end abstract --><!-- headerDoc=abstract;uid=//apple_ref/occ/clm/APPushNotification/subscribeToChannel:deviceId:callback:;name=end --></p>
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/occ/clm/APPushNotification/subscribeToChannel:deviceId:callback:;name=start -->+ (<!-- a logicalPath="//apple_ref/occ/cl/void //apple_ref/occ/tdef/void //apple_ref/occ/tag/void //apple_ref/occ/struct/void //apple_ref/occ/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a -->)<a machinegenerated="true" href="index.html#//apple_ref/occ/clm/APPushNotification/subscribeToChannel:deviceId:callback:" logicalPath="//apple_ref/occ/instm/APPushNotification/subscribeToChannel //apple_ref/occ/clm/APPushNotification/subscribeToChannel" target="_top"><span class="function">subscribeToChannel</span></a>:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/intf/NSString //apple_ref/doc/anysymbol/NSString" machineGenerated="true" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<span class="param">channelName</span> <a machinegenerated="true" href="index.html#//apple_ref/doc/methodparam/APPushNotification/unsubscribeToChannel:deviceId:callback:/deviceId" logicalPath="//apple_ref/occ/instm/APPushNotification/deviceId //apple_ref/occ/clm/APPushNotification/deviceId //apple_ref/occ/intfcm/APPushNotification/deviceId //apple_ref/occ/intfm/APPushNotification/deviceId //apple_ref/occ/func/deviceId //apple_ref/occ/ftmplt/APPushNotification/deviceId //apple_ref/occ/defn/deviceId //apple_ref/occ/macro/deviceId //apple_ref/doc/anysymbol/deviceId" target="_top"><span class="function">deviceId</span></a>:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/intf/NSString //apple_ref/doc/anysymbol/NSString" machineGenerated="true" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<span class="param">deviceId</span> 
+        <a machinegenerated="true" href="index.html#//apple_ref/doc/methodparam/APPushNotification/unsubscribeToChannel:deviceId:callback:/callback" logicalPath="//apple_ref/occ/instm/APPushNotification/callback //apple_ref/occ/clm/APPushNotification/callback //apple_ref/occ/intfcm/APPushNotification/callback //apple_ref/occ/intfm/APPushNotification/callback //apple_ref/occ/func/callback //apple_ref/occ/ftmplt/APPushNotification/callback //apple_ref/occ/defn/callback //apple_ref/occ/macro/callback //apple_ref/doc/anysymbol/callback" target="_top"><span class="function">callback</span></a>:(<a machinegenerated="true" href="../../../Typedefs_h/index.html#//apple_ref/c/tdef/APPushCallback" logicalPath="//apple_ref/occ/cl/APPushCallback //apple_ref/occ/tdef/APPushCallback" target="_top"><span class="type">APPushCallback</span></a>)<!-- a logicalPath="//apple_ref/occ/econst/callback //apple_ref/occ/data/APPushNotification/callback //apple_ref/occ/data/callback //apple_ref/occ/clconst/APPushNotification/callback " machineGenerated="true" --><span class="var">callback</span><!-- /a -->; <!-- headerDoc=declaration;uid=//apple_ref/occ/clm/APPushNotification/subscribeToChannel:deviceId:callback:;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt>
+<!-- headerDoc=methodparam;  uid=//apple_ref/doc/methodparam/APPushNotification/subscribeToChannel:deviceId:callback:/channelName;   name=subscribeToChannel:deviceId:callback:::channelName -->
+<a name="//apple_ref/doc/methodparam/APPushNotification/subscribeToChannel:deviceId:callback:/channelName"></a>
+<code>channelName</code>
+</dt>
+<dd><p>Name of channel to subscribe. Nil values and empty strings will cause a failed response upon request completion.</p></dd>
+<dt>
+<!-- headerDoc=methodparam;  uid=//apple_ref/doc/methodparam/APPushNotification/subscribeToChannel:deviceId:callback:/deviceId;   name=subscribeToChannel:deviceId:callback:::deviceId -->
+<a name="//apple_ref/doc/methodparam/APPushNotification/subscribeToChannel:deviceId:callback:/deviceId"></a>
+<code>deviceId</code>
+</dt>
+<dd><p>Device identifier. Nil values and empty strings will cause a failed response upon request completion.</p></dd>
+<dt>
+<!-- headerDoc=methodparam;  uid=//apple_ref/doc/methodparam/APPushNotification/subscribeToChannel:deviceId:callback:/callback;   name=subscribeToChannel:deviceId:callback:::callback -->
+<a name="//apple_ref/doc/methodparam/APPushNotification/subscribeToChannel:deviceId:callback:/callback"></a>
+<code>callback</code>
+</dt>
+<dd><p>Callback to be execute after channel subscription request is complete.</p></dd>
+</dl>
+</div>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=clm;  uid=//apple_ref/occ/clm/APPushNotification/unregisterDevice:callback:;   name=APPushNotification::unregisterDevice:callback: --><a name="//apple_ref/occ/clm/APPushNotification/unregisterDevice:callback:"></a>
+<h3><a name="unregisterDevice:callback:">unregisterDevice:callback:</a></h3>
+<hr class="afterName">
+<p><!-- headerDoc=abstract;uid=//apple_ref/occ/clm/APPushNotification/unregisterDevice:callback:;name=start --><!-- begin abstract --></p>
+<p>Unregisters a device from push notifications.
+<!-- end abstract --><!-- headerDoc=abstract;uid=//apple_ref/occ/clm/APPushNotification/unregisterDevice:callback:;name=end --></p>
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/occ/clm/APPushNotification/unregisterDevice:callback:;name=start -->+ (<!-- a logicalPath="//apple_ref/occ/cl/void //apple_ref/occ/tdef/void //apple_ref/occ/tag/void //apple_ref/occ/struct/void //apple_ref/occ/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a -->)<a machinegenerated="true" href="index.html#//apple_ref/occ/clm/APPushNotification/unregisterDevice:callback:" logicalPath="//apple_ref/occ/instm/APPushNotification/unregisterDevice //apple_ref/occ/clm/APPushNotification/unregisterDevice" target="_top"><span class="function">unregisterDevice</span></a>:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/intf/NSString //apple_ref/doc/anysymbol/NSString" machineGenerated="true" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<span class="param">deviceId</span> <a machinegenerated="true" href="index.html#//apple_ref/doc/methodparam/APPushNotification/unsubscribeToChannel:deviceId:callback:/callback" logicalPath="//apple_ref/occ/instm/APPushNotification/callback //apple_ref/occ/clm/APPushNotification/callback //apple_ref/occ/intfcm/APPushNotification/callback //apple_ref/occ/intfm/APPushNotification/callback //apple_ref/occ/func/callback //apple_ref/occ/ftmplt/APPushNotification/callback //apple_ref/occ/defn/callback //apple_ref/occ/macro/callback //apple_ref/doc/anysymbol/callback" target="_top"><span class="function">callback</span></a>:(<a machinegenerated="true" href="../../../Typedefs_h/index.html#//apple_ref/c/tdef/APPushCallback" logicalPath="//apple_ref/occ/cl/APPushCallback //apple_ref/occ/tdef/APPushCallback" target="_top"><span class="type">APPushCallback</span></a>)<!-- a logicalPath="//apple_ref/occ/econst/callback //apple_ref/occ/data/APPushNotification/callback //apple_ref/occ/data/callback //apple_ref/occ/clconst/APPushNotification/callback " machineGenerated="true" --><span class="var">callback</span><!-- /a -->; <!-- headerDoc=declaration;uid=//apple_ref/occ/clm/APPushNotification/unregisterDevice:callback:;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt>
+<!-- headerDoc=methodparam;  uid=//apple_ref/doc/methodparam/APPushNotification/unregisterDevice:callback:/deviceId;   name=unregisterDevice:callback:::deviceId -->
+<a name="//apple_ref/doc/methodparam/APPushNotification/unregisterDevice:callback:/deviceId"></a>
+<code>deviceId</code>
+</dt>
+<dd><p>Device identifier. Nil values and empty strings will cause a failed response upon request completion.</p></dd>
+<dt>
+<!-- headerDoc=methodparam;  uid=//apple_ref/doc/methodparam/APPushNotification/unregisterDevice:callback:/callback;   name=unregisterDevice:callback:::callback -->
+<a name="//apple_ref/doc/methodparam/APPushNotification/unregisterDevice:callback:/callback"></a>
+<code>callback</code>
+</dt>
+<dd><p>Callback to be execute after request to unregister device is complete.</p></dd>
+</dl>
+</div>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=clm;  uid=//apple_ref/occ/clm/APPushNotification/unsubscribeFromChannel:deviceId:callback:;   name=APPushNotification::unsubscribeFromChannel:deviceId:callback: --><a name="//apple_ref/occ/clm/APPushNotification/unsubscribeFromChannel:deviceId:callback:"></a>
+<h3><a name="unsubscribeFromChannel:deviceId:callback:">unsubscribeFromChannel:deviceId:callback:</a></h3>
+<hr class="afterName">
+<p><!-- headerDoc=abstract;uid=//apple_ref/occ/clm/APPushNotification/unsubscribeFromChannel:deviceId:callback:;name=start --><!-- begin abstract --></p>
+<p>Unsubcribes from a channel.
+<!-- end abstract --><!-- headerDoc=abstract;uid=//apple_ref/occ/clm/APPushNotification/unsubscribeFromChannel:deviceId:callback:;name=end --></p>
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/occ/clm/APPushNotification/unsubscribeFromChannel:deviceId:callback:;name=start -->+ (<!-- a logicalPath="//apple_ref/occ/cl/void //apple_ref/occ/tdef/void //apple_ref/occ/tag/void //apple_ref/occ/struct/void //apple_ref/occ/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a -->)<a machinegenerated="true" href="index.html#//apple_ref/occ/clm/APPushNotification/unsubscribeFromChannel:deviceId:callback:" logicalPath="//apple_ref/occ/instm/APPushNotification/unsubscribeFromChannel //apple_ref/occ/clm/APPushNotification/unsubscribeFromChannel" target="_top"><span class="function">unsubscribeFromChannel</span></a>:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/intf/NSString //apple_ref/doc/anysymbol/NSString" machineGenerated="true" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<span class="param">channelName</span> 
+        <a machinegenerated="true" href="index.html#//apple_ref/doc/methodparam/APPushNotification/unsubscribeToChannel:deviceId:callback:/deviceId" logicalPath="//apple_ref/occ/instm/APPushNotification/deviceId //apple_ref/occ/clm/APPushNotification/deviceId //apple_ref/occ/intfcm/APPushNotification/deviceId //apple_ref/occ/intfm/APPushNotification/deviceId //apple_ref/occ/func/deviceId //apple_ref/occ/ftmplt/APPushNotification/deviceId //apple_ref/occ/defn/deviceId //apple_ref/occ/macro/deviceId //apple_ref/doc/anysymbol/deviceId" target="_top"><span class="function">deviceId</span></a>:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/intf/NSString //apple_ref/doc/anysymbol/NSString" machineGenerated="true" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<span class="param">deviceId</span> <a machinegenerated="true" href="index.html#//apple_ref/doc/methodparam/APPushNotification/unsubscribeToChannel:deviceId:callback:/callback" logicalPath="//apple_ref/occ/instm/APPushNotification/callback //apple_ref/occ/clm/APPushNotification/callback //apple_ref/occ/intfcm/APPushNotification/callback //apple_ref/occ/intfm/APPushNotification/callback //apple_ref/occ/func/callback //apple_ref/occ/ftmplt/APPushNotification/callback //apple_ref/occ/defn/callback //apple_ref/occ/macro/callback //apple_ref/doc/anysymbol/callback" target="_top"><span class="function">callback</span></a>:(<a machinegenerated="true" href="../../../Typedefs_h/index.html#//apple_ref/c/tdef/APPushCallback" logicalPath="//apple_ref/occ/cl/APPushCallback //apple_ref/occ/tdef/APPushCallback" target="_top"><span class="type">APPushCallback</span></a>)<!-- a logicalPath="//apple_ref/occ/econst/callback //apple_ref/occ/data/APPushNotification/callback //apple_ref/occ/data/callback //apple_ref/occ/clconst/APPushNotification/callback " machineGenerated="true" --><span class="var">callback</span><!-- /a -->; <!-- headerDoc=declaration;uid=//apple_ref/occ/clm/APPushNotification/unsubscribeFromChannel:deviceId:callback:;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt>
+<!-- headerDoc=methodparam;  uid=//apple_ref/doc/methodparam/APPushNotification/unsubscribeFromChannel:deviceId:callback:/channelName;   name=unsubscribeFromChannel:deviceId:callback:::channelName -->
+<a name="//apple_ref/doc/methodparam/APPushNotification/unsubscribeFromChannel:deviceId:callback:/channelName"></a>
+<code>channelName</code>
+</dt>
+<dd><p>Name of channel to unsubscribe. Nil values and empty strings will cause a failed response upon request completion.</p></dd>
+<dt>
+<!-- headerDoc=methodparam;  uid=//apple_ref/doc/methodparam/APPushNotification/unsubscribeFromChannel:deviceId:callback:/deviceId;   name=unsubscribeFromChannel:deviceId:callback:::deviceId -->
+<a name="//apple_ref/doc/methodparam/APPushNotification/unsubscribeFromChannel:deviceId:callback:/deviceId"></a>
+<code>deviceId</code>
+</dt>
+<dd><p>Device identifier. Nil values and empty strings will cause a failed response upon request completion.</p></dd>
+<dt>
+<!-- headerDoc=methodparam;  uid=//apple_ref/doc/methodparam/APPushNotification/unsubscribeFromChannel:deviceId:callback:/callback;   name=unsubscribeFromChannel:deviceId:callback:::callback -->
+<a name="//apple_ref/doc/methodparam/APPushNotification/unsubscribeFromChannel:deviceId:callback:/callback"></a>
+<code>callback</code>
+</dt>
+<dd><p>Callback to be execute after request to unsubscibe from channel is complete.</p></dd>
+</dl>
+</div>
+<p><b>See Also</b></p>
+<div class="list_indent"><dl>
+<dt><p><a href="index.html#//apple_ref/doc/title:clm/APPushNotification/unsubscribeToChannel:deviceId:callback:" logicalPath="//apple_ref/doc/title:clm/APPushNotification/unsubscribeToChannel:deviceId:callback:" target="_top">unsubscribeToChannel:deviceId:callback:</a></p></dt>
+<dd></dd>
+</dl></div>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=title:clm;  uid=//apple_ref/doc/title:clm/APPushNotification/unsubscribeToChannel:deviceId:callback:;   name=APPushNotification::unsubscribeToChannel:deviceId:callback: --><a name="//apple_ref/doc/title:clm/APPushNotification/unsubscribeToChannel:deviceId:callback:"></a>
+<h3><a name="unsubscribeToChannel:deviceId:callback:">unsubscribeToChannel:deviceId:callback:</a></h3>
+<hr class="afterName">
+<p><!-- headerDoc=abstract;uid=//apple_ref/doc/title:clm/APPushNotification/unsubscribeToChannel:deviceId:callback:;name=start --><!-- begin abstract --></p>
+<p>Unsubcribes from a channel.
+<!-- end abstract --><!-- headerDoc=abstract;uid=//apple_ref/doc/title:clm/APPushNotification/unsubscribeToChannel:deviceId:callback:;name=end --></p>
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/doc/title:clm/APPushNotification/unsubscribeToChannel:deviceId:callback:;name=start -->+ (<!-- a logicalPath="//apple_ref/occ/cl/void //apple_ref/occ/tdef/void //apple_ref/occ/tag/void //apple_ref/occ/struct/void //apple_ref/occ/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a -->)<a machinegenerated="true" href="index.html#//apple_ref/occ/clm/APPushNotification/unsubscribeFromChannel:deviceId:callback:" logicalPath="//apple_ref/occ/instm/APPushNotification/unsubscribeFromChannel //apple_ref/occ/clm/APPushNotification/unsubscribeFromChannel" target="_top"><span class="function">unsubscribeFromChannel</span></a>:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/intf/NSString //apple_ref/doc/anysymbol/NSString" machineGenerated="true" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<span class="param">channelName</span> 
+        <a machinegenerated="true" href="index.html#//apple_ref/doc/methodparam/APPushNotification/unsubscribeToChannel:deviceId:callback:/deviceId" logicalPath="//apple_ref/occ/instm/APPushNotification/deviceId //apple_ref/occ/clm/APPushNotification/deviceId //apple_ref/occ/intfcm/APPushNotification/deviceId //apple_ref/occ/intfm/APPushNotification/deviceId //apple_ref/occ/func/deviceId //apple_ref/occ/ftmplt/APPushNotification/deviceId //apple_ref/occ/defn/deviceId //apple_ref/occ/macro/deviceId //apple_ref/doc/anysymbol/deviceId" target="_top"><span class="function">deviceId</span></a>:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/intf/NSString //apple_ref/doc/anysymbol/NSString" machineGenerated="true" --><span class="type">NSString</span><!-- /a --> <span class="type">*</span>)<span class="param">deviceId</span> <a machinegenerated="true" href="index.html#//apple_ref/doc/methodparam/APPushNotification/unsubscribeToChannel:deviceId:callback:/callback" logicalPath="//apple_ref/occ/instm/APPushNotification/callback //apple_ref/occ/clm/APPushNotification/callback //apple_ref/occ/intfcm/APPushNotification/callback //apple_ref/occ/intfm/APPushNotification/callback //apple_ref/occ/func/callback //apple_ref/occ/ftmplt/APPushNotification/callback //apple_ref/occ/defn/callback //apple_ref/occ/macro/callback //apple_ref/doc/anysymbol/callback" target="_top"><span class="function">callback</span></a>:(<a machinegenerated="true" href="../../../Typedefs_h/index.html#//apple_ref/c/tdef/APPushCallback" logicalPath="//apple_ref/occ/cl/APPushCallback //apple_ref/occ/tdef/APPushCallback" target="_top"><span class="type">APPushCallback</span></a>)<!-- a logicalPath="//apple_ref/occ/econst/callback //apple_ref/occ/data/APPushNotification/callback //apple_ref/occ/data/callback //apple_ref/occ/clconst/APPushNotification/callback " machineGenerated="true" --><span class="var">callback</span><!-- /a -->; <!-- headerDoc=declaration;uid=//apple_ref/doc/title:clm/APPushNotification/unsubscribeToChannel:deviceId:callback:;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt>
+<!-- headerDoc=methodparam;  uid=//apple_ref/doc/methodparam/APPushNotification/unsubscribeToChannel:deviceId:callback:/channelName;   name=unsubscribeToChannel:deviceId:callback:::channelName -->
+<a name="//apple_ref/doc/methodparam/APPushNotification/unsubscribeToChannel:deviceId:callback:/channelName"></a>
+<code>channelName</code>
+</dt>
+<dd><p>Name of channel to unsubscribe. Nil values and empty strings will cause a failed response upon request completion.</p></dd>
+<dt>
+<!-- headerDoc=methodparam;  uid=//apple_ref/doc/methodparam/APPushNotification/unsubscribeToChannel:deviceId:callback:/deviceId;   name=unsubscribeToChannel:deviceId:callback:::deviceId -->
+<a name="//apple_ref/doc/methodparam/APPushNotification/unsubscribeToChannel:deviceId:callback:/deviceId"></a>
+<code>deviceId</code>
+</dt>
+<dd><p>Device identifier. Nil values and empty strings will cause a failed response upon request completion.</p></dd>
+<dt>
+<!-- headerDoc=methodparam;  uid=//apple_ref/doc/methodparam/APPushNotification/unsubscribeToChannel:deviceId:callback:/callback;   name=unsubscribeToChannel:deviceId:callback:::callback -->
+<a name="//apple_ref/doc/methodparam/APPushNotification/unsubscribeToChannel:deviceId:callback:/callback"></a>
+<code>callback</code>
+</dt>
+<dd><p>Callback to be execute after request to unsubscibe from channel is complete.</p></dd>
+</dl>
+</div>
+<p><b>See Also</b></p>
+<div class="list_indent"><dl>
+<dt><p><a href="index.html#//apple_ref/occ/clm/APPushNotification/unsubscribeFromChannel:deviceId:callback:" logicalPath="//apple_ref/occ/clm/APPushNotification/unsubscribeFromChannel:deviceId:callback:" target="_top">unsubscribeFromChannel:deviceId:callback:</a></p></dt>
+<dd></dd>
+</dl></div>
+<p class="gapBeforeFooter">&nbsp;</p>
+<hr class="afterFooter">
+<div class="hd_copyright_and_timestamp">
+<p class="hd_timestamp">Last Updated: Friday, September 11, 2015
+</p>
+</div>
+</td>
+</tr></table>
+</body>
+</html>

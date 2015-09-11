@@ -1,0 +1,8 @@
+HTTP/1.1 201 Created
+Date: 2015-09-11T17:32:33-04:00
+Status: 201 Created
+Connection: close
+Content-Type: application/json; charset=utf-8
+Content-Length: 357
+
+{"id":"generated_testId","amount":258.0,"currency":"testCurrency","destination_account_id":"testDestinationAccountId","destination_id":"testDestinationId","memo":"testMemo","payee_desc":"testPayeeDesc","payee_id":"testPayeeId","payee_type":"testPayeeType","payment_type":719,"reference_number":"testReferenceNumber","transaction_date":"testTransactionDate"}

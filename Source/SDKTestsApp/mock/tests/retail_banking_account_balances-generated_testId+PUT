@@ -1,0 +1,8 @@
+HTTP/1.1 204 No Content
+Date: 2015-09-11T17:32:33-04:00
+Status: 204 No Content
+Connection: close
+Content-Type: application/json; charset=utf-8
+Content-Length: 99
+
+{"id":"generated_testId","account_id":"testAccountId","balance_type":"testBalanceType","value":115}
