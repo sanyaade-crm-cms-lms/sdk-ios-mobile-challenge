@@ -176,32 +176,29 @@ Some basic setup is required in order to utilize the SDK effectively in your app
 NSURL url = [NSURL urlWithString:"www.example.com:3000"];
 [AnyPresenceAPI setBaseURL:url];
 ```
-
-If certificate pinning is necessary, the following setup will enable the feature.
-
+An auth token must be set and will be used in future calls
 ```
-NSString *certificatePath = [[NSBundle mainBundle] pathForResource:@"myCertificate" ofType:@"cer"];
-[AnyPresenceAPI setSSLCertificate:certificatePath];
+NSDictionary *clientContext = @{@"clientID":[self.clientIdTextField.text copy]};
+LoginInfo *loginInfo = [[LoginInfo alloc] init];
+loginInfo.username = [self.usernameTextField.text copy];
+loginInfo.password = [self.passwordTextField.text copy];
+LoginViewController * __weak weakSelf = self;
+[loginInfo createAsyncWithContext:clientContext async:^(id object, NSError *error) {
+    if ([object token]) {
+        [object setToken:[@"Bearer " stringByAppendingString:[object token]]];
+        NSMutableDictionary *loginContext = [NSMutableDictionary dictionary];
+        [loginContext addEntriesFromDictionary:clientContext];
+        [loginContext addEntriesFromDictionary:@{@"loginInfo":object}];
+        [[ContextManager sharedManager] setLoginContext:loginContext];
+        [weakSelf performSegueWithIdentifier:@"TabBarControllerSegueID" sender:self];
+    }
+    else {
+        weakSelf.loginButton.hidden = NO;
+        [weakSelf.activityIndicatorView stopAnimating];
+        [[[UIAlertView alloc] initWithTitle:@"Login Error" message:error.description delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+    }
+}];
 ```
-
-Alternatively, the base url and certificate can be set in the same call in the following manner:
-
-```
-NSURL *url = [NSURL URLWithString:@"https://www.example.com:3000/api/v1/"];
-NSString *certificatePath = [[NSBundle mainBundle] pathForResource:@"myCertificate" ofType:@"cer"];
-[AnyPresenceAPI setBaseURL:url withSSLCertificatePath:certificatePath];
-```
-
-Authentication can be set in the following manner:
-
-```
-AuthManager * auth = [AuthManager new];
-auth.signInURL = [NSURL URLWithString:@"https://www.example.com:3000/auth/password/callback"];
-auth.signOutURL = [NSURL URLWithString:@"https://www.example.com:3000/auth/signout"];
-auth.persistsCurrentCredentials = NO;
-[AuthManager setDefaultManager:auth];
-```
-
 ##CRUD
 
 The SDK supports asynchronous CRUD method calls.  Synchronous calls have been deprecated in this version of the SDK.  The following serve as examples of basic CRUD method calls.
