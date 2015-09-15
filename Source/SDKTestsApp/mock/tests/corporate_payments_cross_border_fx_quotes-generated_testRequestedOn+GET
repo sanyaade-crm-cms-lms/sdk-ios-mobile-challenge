@@ -1,8 +1,8 @@
 HTTP/1.1 200 OK
-Date: 2015-09-11T17:32:33-04:00
+Date: 2015-09-15T14:00:46-04:00
 Status: 200 OK
 Connection: close
 Content-Type: application/json; charset=utf-8
 Content-Length: 278
 
-{"requested_on":"generated_testRequestedOn","from_amount":228.0,"from_currency":"testFromCurrency","rate_expiry":"testRateExpiry","rate_reference":"testRateReference","requested_by":"testRequestedBy","to_amount":251.0,"to_currency":"testToCurrency","value_date":"testValueDate"}
+{"requested_on":"generated_testRequestedOn","from_amount":284.0,"from_currency":"testFromCurrency","rate_expiry":"testRateExpiry","rate_reference":"testRateReference","requested_by":"testRequestedBy","to_amount":188.0,"to_currency":"testToCurrency","value_date":"testValueDate"}
