@@ -14,8 +14,66 @@ This should serve as a guide for the iOS SDK for CitiMobileChallenge.
   - [D2S Context Usage](d2s-context-usage)
 
 ## Project Structure
+(Use the following subset of calls, refer to the full docs for implementation)
+### Retail Banking
+    - [RetailBankingLogin]
+      - [Create] (POST /retailbanking/v1/login)
+
+    - [RetailBankingAccount]
+      - [Query Scopes][RetailBankingAccountAll] (GET /retailbanking/v1/accounts)
+      - [Read] (GET /retailbanking/v1/accounts/{account_id})
 
 
+    - [RetailBankingAccountBalance](#retailbankingaccountbalance)
+      - [Query Scopes](#query-scopes-14)
+
+        - [RetailBankingAccountBalanceAll](#retailbankingaccountbalanceall)
+
+
+    - [RetailBankingAccountFundTransfer](#retailbankingaccountfundtransfer)
+      - [Create](#create-15)
+
+
+    - [RetailBankingAccountTransaction](#retailbankingaccounttransaction)
+      - [Query Scopes](#query-scopes-16)
+
+        - [RetailBankingAccountTransactionAll](#retailbankingaccounttransactionall)
+
+
+    - [RetailBankingForeignCurrency](#retailbankingforeigncurrency)
+      - [Query Scopes](#query-scopes-17)
+
+        - [RetailBankingForeignCurrencyForeignCurrency](#retailbankingforeigncurrencyforeigncurrency)
+
+
+    - [RetailBankingLocation](#retailbankinglocation)
+      - [Query Scopes](#query-scopes-18)
+
+        - [RetailBankingLocationLocations](#retailbankinglocationlocations)
+
+
+
+
+    - [RetailBankingPayee](#retailbankingpayee)
+      - [Query Scopes](#query-scopes-20)
+
+        - [RetailBankingPayeeAll](#retailbankingpayeeall)
+
+
+    - [RetailBankingPayeeType](#retailbankingpayeetype)
+      - [Query Scopes](#query-scopes-21)
+
+        - [RetailBankingPayeeTypeAll](#retailbankingpayeetypeall)
+
+
+    - [RetailBankingRewardsCatalog](#retailbankingrewardscatalog)
+      - [Query Scopes](#query-scopes-22)
+
+        - [RetailBankingRewardsCatalogRewardsCatalog](#retailbankingrewardscatalogrewardscatalog)
+
+
+    - [RetailBankingRewardsRedemption](#retailbankingrewardsredemption)
+      - [Create](#create-23)
     - [CapitalMarketsActivity](#capitalmarketsactivity)
       - [Query Scopes](#query-scopes)
 
@@ -92,66 +150,6 @@ This should serve as a guide for the iOS SDK for CitiMobileChallenge.
 
         - [CorporatePaymentsPaymentAll](#corporatepaymentspaymentall)
 
-
-    - [RetailBankingAccount](#retailbankingaccount)
-      - [Read](#read-13)
-      - [Query Scopes](#query-scopes-13)
-
-        - [RetailBankingAccountAll](#retailbankingaccountall)
-
-
-    - [RetailBankingAccountBalance](#retailbankingaccountbalance)
-      - [Query Scopes](#query-scopes-14)
-
-        - [RetailBankingAccountBalanceAll](#retailbankingaccountbalanceall)
-
-
-    - [RetailBankingAccountFundTransfer](#retailbankingaccountfundtransfer)
-      - [Create](#create-15)
-
-
-    - [RetailBankingAccountTransaction](#retailbankingaccounttransaction)
-      - [Query Scopes](#query-scopes-16)
-
-        - [RetailBankingAccountTransactionAll](#retailbankingaccounttransactionall)
-
-
-    - [RetailBankingForeignCurrency](#retailbankingforeigncurrency)
-      - [Query Scopes](#query-scopes-17)
-
-        - [RetailBankingForeignCurrencyForeignCurrency](#retailbankingforeigncurrencyforeigncurrency)
-
-
-    - [RetailBankingLocation](#retailbankinglocation)
-      - [Query Scopes](#query-scopes-18)
-
-        - [RetailBankingLocationLocations](#retailbankinglocationlocations)
-
-
-    - [RetailBankingLogin](#retailbankinglogin)
-      - [Create](#create-19)
-
-
-    - [RetailBankingPayee](#retailbankingpayee)
-      - [Query Scopes](#query-scopes-20)
-
-        - [RetailBankingPayeeAll](#retailbankingpayeeall)
-
-
-    - [RetailBankingPayeeType](#retailbankingpayeetype)
-      - [Query Scopes](#query-scopes-21)
-
-        - [RetailBankingPayeeTypeAll](#retailbankingpayeetypeall)
-
-
-    - [RetailBankingRewardsCatalog](#retailbankingrewardscatalog)
-      - [Query Scopes](#query-scopes-22)
-
-        - [RetailBankingRewardsCatalogRewardsCatalog](#retailbankingrewardscatalogrewardscatalog)
-
-
-    - [RetailBankingRewardsRedemption](#retailbankingrewardsredemption)
-      - [Create](#create-23)
 
 
 ##Adding SDK to Application
