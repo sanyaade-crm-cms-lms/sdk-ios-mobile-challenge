@@ -15,6 +15,7 @@ This should serve as a guide for the iOS SDK for CitiMobileChallenge.
 
 ## Project Structure
 (Use the following subset of calls, refer to the full docs for implementation)
+
 ### Retail Banking
     - [RetailBankingLogin]
       - [Create] (POST /retailbanking/v1/login)
@@ -23,132 +24,106 @@ This should serve as a guide for the iOS SDK for CitiMobileChallenge.
       - [Query Scopes][RetailBankingAccountAll] (GET /retailbanking/v1/accounts)
       - [Read] (GET /retailbanking/v1/accounts/{account_id})
 
+    - [RetailBankingAccountBalance]
+      - [Query Scopes][RetailBankingAccountBalanceAll] (GET /retailbanking/v1/accounts/{account_id}/balances)
 
-    - [RetailBankingAccountBalance](#retailbankingaccountbalance)
-      - [Query Scopes](#query-scopes-14)
+    - [RetailBankingAccountTransaction]
+      - [Query Scopes][RetailBankingAccountTransactionAll] (GET /retailbanking/v1/accounts/{account_id}/transactions)
 
-        - [RetailBankingAccountBalanceAll](#retailbankingaccountbalanceall)
+    - [RetailBankingPayeeType]
+      - [Query Scopes][RetailBankingPayeeTypeAll] (GET /retailbanking/v1/payee_types)
 
+    - [RetailBankingPayee]
+      - [Query Scopes][RetailBankingPayeeAll] (GET /retailbanking/v1/payees)
 
-    - [RetailBankingAccountFundTransfer](#retailbankingaccountfundtransfer)
-      - [Create](#create-15)
+    - [RetailBankingAccountFundTransfer]
+      - [Create] (POST /retailbanking/v1/accounts/{account_id}/fund_transfers)
 
+    - [RetailBankingForeignCurrency]
+      - [Query Scopes][RetailBankingForeignCurrencyForeignCurrency] (GET /retailbanking/v1/foreign_currency)
 
-    - [RetailBankingAccountTransaction](#retailbankingaccounttransaction)
-      - [Query Scopes](#query-scopes-16)
+    - [RetailBankingRewardsCatalog]
+      - [Query Scopes][RetailBankingRewardsCatalogRewardsCatalog] (GET /retailbanking/v1/rewards/catalog)
 
-        - [RetailBankingAccountTransactionAll](#retailbankingaccounttransactionall)
+    - [RetailBankingRewardsRedemption]
+      - [Create] (POST /retailbanking/v1/rewards/redemption)
 
+    - [RetailBankingLocation]
+      - [Query Scopes][RetailBankingLocationLocations] (GET /retailbanking/v1/locations)
 
-    - [RetailBankingForeignCurrency](#retailbankingforeigncurrency)
-      - [Query Scopes](#query-scopes-17)
+### Corporate Payments
+    - [CorporatePaymentsLogin]
+      - [Create] (POST /corporatepayments/v1/login)
 
-        - [RetailBankingForeignCurrencyForeignCurrency](#retailbankingforeigncurrencyforeigncurrency)
+    - [CorporatePaymentsAccount]
+      - [Create] (POST /corporatepayments/v1/accounts)
+      - [Query Scopes][CorporatePaymentsAccountAll] (GET /corporatepayments/v1/accounts)
+      - [Update] (PUT /corporatepayments/v1/accounts/{account_id})
+      - [Read] (GET /corporatepayments/v1/accounts/{account_id})
 
+    - [CorporatePaymentsPayment]
+      - [Create] (POST /corporatepayments/v1/payments)
+      - [Query Scopes][CorporatePaymentsPaymentAll] (GET /corporatepayments/v1/payments)
+      - [Read] (GET /corporatepayments/v1/payments/{payment_id})
 
-    - [RetailBankingLocation](#retailbankinglocation)
-      - [Query Scopes](#query-scopes-18)
+    - [CorporatePaymentsBeneficiary]
+      - [Create] (POST /corporatepayments/v1/beneficiaries)
+      - [Update] (PUT /corporatepayments/v1/beneficiaries/{beneficiary_id})
+      - [Read] (GET /corporatepayments/v1/beneficiaries/{beneficiary_id})
 
-        - [RetailBankingLocationLocations](#retailbankinglocationlocations)
+    - [CorporatePaymentsCrossBorderFxQuote]
+      - [Create] (POST /corporatepayments/v1/crossborder/fx_quotes)
 
+    - [CorporatePaymentsCrossBorderFxBooking]
+      - [Create] (POST /corporatepayments/v1/crossborder/fx_bookings)
 
+    - [CorporatePaymentsCrossBorderFxPayment]
+      - [Create] (POST /corporatepayments/v1/crossborder/fx_payments)
+      - [Query Scopes][CorporatePaymentsCrossBorderFxPaymentFxPayments] (GET /corporatepayments/v1/crossborder/fx_payments)
+      - [Read] (GET /corporatepayments/v1/crossborder/fx_payments/{citi_ref})
 
+### Capital Markets Trading
+    - [CapitalMarketsLogin]
+      - [Create] (POST /capitalmarkets/v1/login)
 
-    - [RetailBankingPayee](#retailbankingpayee)
-      - [Query Scopes](#query-scopes-20)
+    - [CapitalMarketsOrder]
+      - [Create] (POST /capitalmarkets/v1/orders)
+      - [Read] (GET /capitalmarkets/v1/orders/{order_id})
+      - [Delete] (DELETE /capitalmarkets/v1/orders/{order_id})
 
-        - [RetailBankingPayeeAll](#retailbankingpayeeall)
+### Revenue Analytics and Client Relationship Management
+    - [CapitalMarketsLogin]
+      - [Create] (POST /capitalmarkets/v1/login)
 
+    - [CapitalMarketsRevenue]
+      - [Query Scopes][CapitalMarketsRevenueRevenues] (GET /capitalmarkets/v1/revenues)
 
-    - [RetailBankingPayeeType](#retailbankingpayeetype)
-      - [Query Scopes](#query-scopes-21)
+    - [CapitalMarketsActivity]
+      - [Query Scopes][CapitalMarketsActivityActivities] (GET /capitalmarkets/v1/activities)
 
-        - [RetailBankingPayeeTypeAll](#retailbankingpayeetypeall)
+    - [CapitalMarketsContact]
+      - [Query Scopes][CapitalMarketsContactContacts] (GET /capitalmarkets/v1/contacts)
 
-
-    - [RetailBankingRewardsCatalog](#retailbankingrewardscatalog)
-      - [Query Scopes](#query-scopes-22)
-
-        - [RetailBankingRewardsCatalogRewardsCatalog](#retailbankingrewardscatalogrewardscatalog)
-
-
-    - [RetailBankingRewardsRedemption](#retailbankingrewardsredemption)
-      - [Create](#create-23)
-    - [CapitalMarketsActivity](#capitalmarketsactivity)
-      - [Query Scopes](#query-scopes)
-
-        - [CapitalMarketsActivityActivities](#capitalmarketsactivityactivities)
-
-
-    - [CapitalMarketsContact](#capitalmarketscontact)
-      - [Query Scopes](#query-scopes-1)
-
-        - [CapitalMarketsContactContacts](#capitalmarketscontactcontacts)
-
-
-    - [CapitalMarketsContentService](#capitalmarketscontentservice)
-      - [Query Scopes](#query-scopes-2)
-
-        - [CapitalMarketsContentServiceContentServices](#capitalmarketscontentservicecontentservices)
-
-
-    - [CapitalMarketsLogin](#capitalmarketslogin)
-      - [Create](#create-3)
-
-
-    - [CapitalMarketsOrder](#capitalmarketsorder)
-      - [Create](#create-4)
-      - [Read](#read-4)
-      - [Delete](#delete-4)
-
-
-    - [CapitalMarketsRevenue](#capitalmarketsrevenue)
-      - [Query Scopes](#query-scopes-5)
-
-        - [CapitalMarketsRevenueRevenues](#capitalmarketsrevenuerevenues)
-
-
-    - [CorporatePaymentsAccount](#corporatepaymentsaccount)
-      - [Create](#create-6)
-      - [Update](#update-6)
-      - [Read](#read-6)
-      - [Query Scopes](#query-scopes-6)
-
-        - [CorporatePaymentsAccountAll](#corporatepaymentsaccountall)
+    - [CapitalMarketsContentService]
+      - [Query Scopes][CapitalMarketsContentServiceContentServices](GET /capitalmarkets/v1/content_services)
 
 
-    - [CorporatePaymentsBeneficiary](#corporatepaymentsbeneficiary)
-      - [Create](#create-7)
-      - [Update](#update-7)
-      - [Read](#read-7)
 
 
-    - [CorporatePaymentsCrossBorderFxBooking](#corporatepaymentscrossborderfxbooking)
-      - [Create](#create-8)
 
 
-    - [CorporatePaymentsCrossBorderFxPayment](#corporatepaymentscrossborderfxpayment)
-      - [Create](#create-9)
-      - [Read](#read-9)
-      - [Query Scopes](#query-scopes-9)
-
-        - [CorporatePaymentsCrossBorderFxPaymentFxPayments](#corporatepaymentscrossborderfxpaymentfxpayments)
 
 
-    - [CorporatePaymentsCrossBorderFxQuote](#corporatepaymentscrossborderfxquote)
-      - [Create](#create-10)
 
 
-    - [CorporatePaymentsLogin](#corporatepaymentslogin)
-      - [Create](#create-11)
 
 
-    - [CorporatePaymentsPayment](#corporatepaymentspayment)
-      - [Create](#create-12)
-      - [Read](#read-12)
-      - [Query Scopes](#query-scopes-12)
 
-        - [CorporatePaymentsPaymentAll](#corporatepaymentspaymentall)
+
+
+
+
+
 
 
 
