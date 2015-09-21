@@ -12,330 +12,144 @@ This should serve as a guide for the iOS SDK for CitiMobileChallenge.
   - [CRUD](#crud)
   - [Local Caching](#local-caching)
   - [D2S Context Usage](d2s-context-usage)
-  - [Push Notification](#push-notification)
 
 ## Project Structure
-  
-    
+(Use the following subset of calls, refer to the full docs for implementation)
+### Retail Banking
+    - [RetailBankingLogin]
+      - [Create] (POST /retailbanking/v1/login)
+
+    - [RetailBankingAccount]
+      - [Query Scopes][RetailBankingAccountAll] (GET /retailbanking/v1/accounts)
+      - [Read] (GET /retailbanking/v1/accounts/{account_id})
+
+
+    - [RetailBankingAccountBalance](#retailbankingaccountbalance)
+      - [Query Scopes](#query-scopes-14)
+
+        - [RetailBankingAccountBalanceAll](#retailbankingaccountbalanceall)
+
+
+    - [RetailBankingAccountFundTransfer](#retailbankingaccountfundtransfer)
+      - [Create](#create-15)
+
+
+    - [RetailBankingAccountTransaction](#retailbankingaccounttransaction)
+      - [Query Scopes](#query-scopes-16)
+
+        - [RetailBankingAccountTransactionAll](#retailbankingaccounttransactionall)
+
+
+    - [RetailBankingForeignCurrency](#retailbankingforeigncurrency)
+      - [Query Scopes](#query-scopes-17)
+
+        - [RetailBankingForeignCurrencyForeignCurrency](#retailbankingforeigncurrencyforeigncurrency)
+
+
+    - [RetailBankingLocation](#retailbankinglocation)
+      - [Query Scopes](#query-scopes-18)
+
+        - [RetailBankingLocationLocations](#retailbankinglocationlocations)
+
+
+
+
+    - [RetailBankingPayee](#retailbankingpayee)
+      - [Query Scopes](#query-scopes-20)
+
+        - [RetailBankingPayeeAll](#retailbankingpayeeall)
+
+
+    - [RetailBankingPayeeType](#retailbankingpayeetype)
+      - [Query Scopes](#query-scopes-21)
+
+        - [RetailBankingPayeeTypeAll](#retailbankingpayeetypeall)
+
+
+    - [RetailBankingRewardsCatalog](#retailbankingrewardscatalog)
+      - [Query Scopes](#query-scopes-22)
+
+        - [RetailBankingRewardsCatalogRewardsCatalog](#retailbankingrewardscatalogrewardscatalog)
+
+
+    - [RetailBankingRewardsRedemption](#retailbankingrewardsredemption)
+      - [Create](#create-23)
     - [CapitalMarketsActivity](#capitalmarketsactivity)
-      - [Create](#create)
-      - [Update](#update)
-      - [Read](#read)
-      - [Delete](#delete)
       - [Query Scopes](#query-scopes)
-      
-        - [CapitalMarketsActivityAll](#capitalmarketsactivityall)
-        - [CapitalMarketsActivityExactMatch](#capitalmarketsactivityexactmatch)
-        - [CapitalMarketsActivityCount](#capitalmarketsactivitycount)
-        - [CapitalMarketsActivityCountExactMatch](#capitalmarketsactivitycountexactmatch)
+
         - [CapitalMarketsActivityActivities](#capitalmarketsactivityactivities)
-   
-    
+
+
     - [CapitalMarketsContact](#capitalmarketscontact)
-      - [Create](#create-1)
-      - [Update](#update-1)
-      - [Read](#read-1)
-      - [Delete](#delete-1)
       - [Query Scopes](#query-scopes-1)
-      
-        - [CapitalMarketsContactAll](#capitalmarketscontactall)
-        - [CapitalMarketsContactExactMatch](#capitalmarketscontactexactmatch)
-        - [CapitalMarketsContactCount](#capitalmarketscontactcount)
-        - [CapitalMarketsContactCountExactMatch](#capitalmarketscontactcountexactmatch)
+
         - [CapitalMarketsContactContacts](#capitalmarketscontactcontacts)
-   
-    
+
+
     - [CapitalMarketsContentService](#capitalmarketscontentservice)
-      - [Create](#create-2)
-      - [Update](#update-2)
-      - [Read](#read-2)
-      - [Delete](#delete-2)
       - [Query Scopes](#query-scopes-2)
-      
-        - [CapitalMarketsContentServiceAll](#capitalmarketscontentserviceall)
-        - [CapitalMarketsContentServiceExactMatch](#capitalmarketscontentserviceexactmatch)
-        - [CapitalMarketsContentServiceCount](#capitalmarketscontentservicecount)
-        - [CapitalMarketsContentServiceCountExactMatch](#capitalmarketscontentservicecountexactmatch)
+
         - [CapitalMarketsContentServiceContentServices](#capitalmarketscontentservicecontentservices)
-   
-    
+
+
     - [CapitalMarketsLogin](#capitalmarketslogin)
       - [Create](#create-3)
-      - [Update](#update-3)
-      - [Read](#read-3)
-      - [Delete](#delete-3)
-      - [Query Scopes](#query-scopes-3)
-      
-        - [CapitalMarketsLoginAll](#capitalmarketsloginall)
-        - [CapitalMarketsLoginExactMatch](#capitalmarketsloginexactmatch)
-        - [CapitalMarketsLoginCount](#capitalmarketslogincount)
-        - [CapitalMarketsLoginCountExactMatch](#capitalmarketslogincountexactmatch)
-   
-    
+
+
     - [CapitalMarketsOrder](#capitalmarketsorder)
       - [Create](#create-4)
-      - [Update](#update-4)
       - [Read](#read-4)
       - [Delete](#delete-4)
-      - [Query Scopes](#query-scopes-4)
-      
-        - [CapitalMarketsOrderAll](#capitalmarketsorderall)
-        - [CapitalMarketsOrderExactMatch](#capitalmarketsorderexactmatch)
-        - [CapitalMarketsOrderCount](#capitalmarketsordercount)
-        - [CapitalMarketsOrderCountExactMatch](#capitalmarketsordercountexactmatch)
-   
-    
+
+
     - [CapitalMarketsRevenue](#capitalmarketsrevenue)
-      - [Create](#create-5)
-      - [Update](#update-5)
-      - [Read](#read-5)
-      - [Delete](#delete-5)
       - [Query Scopes](#query-scopes-5)
-      
-        - [CapitalMarketsRevenueAll](#capitalmarketsrevenueall)
-        - [CapitalMarketsRevenueExactMatch](#capitalmarketsrevenueexactmatch)
-        - [CapitalMarketsRevenueCount](#capitalmarketsrevenuecount)
-        - [CapitalMarketsRevenueCountExactMatch](#capitalmarketsrevenuecountexactmatch)
+
         - [CapitalMarketsRevenueRevenues](#capitalmarketsrevenuerevenues)
-   
-    
+
+
     - [CorporatePaymentsAccount](#corporatepaymentsaccount)
       - [Create](#create-6)
       - [Update](#update-6)
       - [Read](#read-6)
-      - [Delete](#delete-6)
       - [Query Scopes](#query-scopes-6)
-      
+
         - [CorporatePaymentsAccountAll](#corporatepaymentsaccountall)
-        - [CorporatePaymentsAccountExactMatch](#corporatepaymentsaccountexactmatch)
-        - [CorporatePaymentsAccountCount](#corporatepaymentsaccountcount)
-        - [CorporatePaymentsAccountCountExactMatch](#corporatepaymentsaccountcountexactmatch)
-   
-    
+
+
     - [CorporatePaymentsBeneficiary](#corporatepaymentsbeneficiary)
       - [Create](#create-7)
       - [Update](#update-7)
       - [Read](#read-7)
-      - [Delete](#delete-7)
-      - [Query Scopes](#query-scopes-7)
-      
-        - [CorporatePaymentsBeneficiaryAll](#corporatepaymentsbeneficiaryall)
-        - [CorporatePaymentsBeneficiaryExactMatch](#corporatepaymentsbeneficiaryexactmatch)
-        - [CorporatePaymentsBeneficiaryCount](#corporatepaymentsbeneficiarycount)
-        - [CorporatePaymentsBeneficiaryCountExactMatch](#corporatepaymentsbeneficiarycountexactmatch)
-   
-    
+
+
     - [CorporatePaymentsCrossBorderFxBooking](#corporatepaymentscrossborderfxbooking)
       - [Create](#create-8)
-      - [Update](#update-8)
-      - [Read](#read-8)
-      - [Delete](#delete-8)
-      - [Query Scopes](#query-scopes-8)
-      
-        - [CorporatePaymentsCrossBorderFxBookingAll](#corporatepaymentscrossborderfxbookingall)
-        - [CorporatePaymentsCrossBorderFxBookingExactMatch](#corporatepaymentscrossborderfxbookingexactmatch)
-        - [CorporatePaymentsCrossBorderFxBookingCount](#corporatepaymentscrossborderfxbookingcount)
-        - [CorporatePaymentsCrossBorderFxBookingCountExactMatch](#corporatepaymentscrossborderfxbookingcountexactmatch)
-   
-    
+
+
     - [CorporatePaymentsCrossBorderFxPayment](#corporatepaymentscrossborderfxpayment)
       - [Create](#create-9)
-      - [Update](#update-9)
       - [Read](#read-9)
-      - [Delete](#delete-9)
       - [Query Scopes](#query-scopes-9)
-      
-        - [CorporatePaymentsCrossBorderFxPaymentAll](#corporatepaymentscrossborderfxpaymentall)
-        - [CorporatePaymentsCrossBorderFxPaymentExactMatch](#corporatepaymentscrossborderfxpaymentexactmatch)
-        - [CorporatePaymentsCrossBorderFxPaymentCount](#corporatepaymentscrossborderfxpaymentcount)
-        - [CorporatePaymentsCrossBorderFxPaymentCountExactMatch](#corporatepaymentscrossborderfxpaymentcountexactmatch)
+
         - [CorporatePaymentsCrossBorderFxPaymentFxPayments](#corporatepaymentscrossborderfxpaymentfxpayments)
-   
-    
+
+
     - [CorporatePaymentsCrossBorderFxQuote](#corporatepaymentscrossborderfxquote)
       - [Create](#create-10)
-      - [Update](#update-10)
-      - [Read](#read-10)
-      - [Delete](#delete-10)
-      - [Query Scopes](#query-scopes-10)
-      
-        - [CorporatePaymentsCrossBorderFxQuoteAll](#corporatepaymentscrossborderfxquoteall)
-        - [CorporatePaymentsCrossBorderFxQuoteExactMatch](#corporatepaymentscrossborderfxquoteexactmatch)
-        - [CorporatePaymentsCrossBorderFxQuoteCount](#corporatepaymentscrossborderfxquotecount)
-        - [CorporatePaymentsCrossBorderFxQuoteCountExactMatch](#corporatepaymentscrossborderfxquotecountexactmatch)
-   
-    
+
+
     - [CorporatePaymentsLogin](#corporatepaymentslogin)
       - [Create](#create-11)
-      - [Update](#update-11)
-      - [Read](#read-11)
-      - [Delete](#delete-11)
-      - [Query Scopes](#query-scopes-11)
-      
-        - [CorporatePaymentsLoginAll](#corporatepaymentsloginall)
-        - [CorporatePaymentsLoginExactMatch](#corporatepaymentsloginexactmatch)
-        - [CorporatePaymentsLoginCount](#corporatepaymentslogincount)
-        - [CorporatePaymentsLoginCountExactMatch](#corporatepaymentslogincountexactmatch)
-   
-    
+
+
     - [CorporatePaymentsPayment](#corporatepaymentspayment)
       - [Create](#create-12)
-      - [Update](#update-12)
       - [Read](#read-12)
-      - [Delete](#delete-12)
       - [Query Scopes](#query-scopes-12)
-      
+
         - [CorporatePaymentsPaymentAll](#corporatepaymentspaymentall)
-        - [CorporatePaymentsPaymentExactMatch](#corporatepaymentspaymentexactmatch)
-        - [CorporatePaymentsPaymentCount](#corporatepaymentspaymentcount)
-        - [CorporatePaymentsPaymentCountExactMatch](#corporatepaymentspaymentcountexactmatch)
-   
-    
-    - [RetailBankingAccount](#retailbankingaccount)
-      - [Create](#create-13)
-      - [Update](#update-13)
-      - [Read](#read-13)
-      - [Delete](#delete-13)
-      - [Query Scopes](#query-scopes-13)
-      
-        - [RetailBankingAccountAll](#retailbankingaccountall)
-        - [RetailBankingAccountExactMatch](#retailbankingaccountexactmatch)
-        - [RetailBankingAccountCount](#retailbankingaccountcount)
-        - [RetailBankingAccountCountExactMatch](#retailbankingaccountcountexactmatch)
-   
-    
-    - [RetailBankingAccountBalance](#retailbankingaccountbalance)
-      - [Create](#create-14)
-      - [Update](#update-14)
-      - [Read](#read-14)
-      - [Delete](#delete-14)
-      - [Query Scopes](#query-scopes-14)
-      
-        - [RetailBankingAccountBalanceAll](#retailbankingaccountbalanceall)
-        - [RetailBankingAccountBalanceExactMatch](#retailbankingaccountbalanceexactmatch)
-        - [RetailBankingAccountBalanceCount](#retailbankingaccountbalancecount)
-        - [RetailBankingAccountBalanceCountExactMatch](#retailbankingaccountbalancecountexactmatch)
-   
-    
-    - [RetailBankingAccountFundTransfer](#retailbankingaccountfundtransfer)
-      - [Create](#create-15)
-      - [Update](#update-15)
-      - [Read](#read-15)
-      - [Delete](#delete-15)
-      - [Query Scopes](#query-scopes-15)
-      
-        - [RetailBankingAccountFundTransferAll](#retailbankingaccountfundtransferall)
-        - [RetailBankingAccountFundTransferExactMatch](#retailbankingaccountfundtransferexactmatch)
-        - [RetailBankingAccountFundTransferCount](#retailbankingaccountfundtransfercount)
-        - [RetailBankingAccountFundTransferCountExactMatch](#retailbankingaccountfundtransfercountexactmatch)
-   
-    
-    - [RetailBankingAccountTransaction](#retailbankingaccounttransaction)
-      - [Create](#create-16)
-      - [Update](#update-16)
-      - [Read](#read-16)
-      - [Delete](#delete-16)
-      - [Query Scopes](#query-scopes-16)
-      
-        - [RetailBankingAccountTransactionAll](#retailbankingaccounttransactionall)
-        - [RetailBankingAccountTransactionExactMatch](#retailbankingaccounttransactionexactmatch)
-        - [RetailBankingAccountTransactionCount](#retailbankingaccounttransactioncount)
-        - [RetailBankingAccountTransactionCountExactMatch](#retailbankingaccounttransactioncountexactmatch)
-   
-    
-    - [RetailBankingForeignCurrency](#retailbankingforeigncurrency)
-      - [Create](#create-17)
-      - [Update](#update-17)
-      - [Read](#read-17)
-      - [Delete](#delete-17)
-      - [Query Scopes](#query-scopes-17)
-      
-        - [RetailBankingForeignCurrencyAll](#retailbankingforeigncurrencyall)
-        - [RetailBankingForeignCurrencyExactMatch](#retailbankingforeigncurrencyexactmatch)
-        - [RetailBankingForeignCurrencyCount](#retailbankingforeigncurrencycount)
-        - [RetailBankingForeignCurrencyCountExactMatch](#retailbankingforeigncurrencycountexactmatch)
-        - [RetailBankingForeignCurrencyForeignCurrency](#retailbankingforeigncurrencyforeigncurrency)
-   
-    
-    - [RetailBankingLocation](#retailbankinglocation)
-      - [Create](#create-18)
-      - [Update](#update-18)
-      - [Read](#read-18)
-      - [Delete](#delete-18)
-      - [Query Scopes](#query-scopes-18)
-      
-        - [RetailBankingLocationAll](#retailbankinglocationall)
-        - [RetailBankingLocationExactMatch](#retailbankinglocationexactmatch)
-        - [RetailBankingLocationCount](#retailbankinglocationcount)
-        - [RetailBankingLocationCountExactMatch](#retailbankinglocationcountexactmatch)
-        - [RetailBankingLocationLocations](#retailbankinglocationlocations)
-   
-    
-    - [RetailBankingLogin](#retailbankinglogin)
-      - [Create](#create-19)
-      - [Update](#update-19)
-      - [Read](#read-19)
-      - [Delete](#delete-19)
-      - [Query Scopes](#query-scopes-19)
-      
-        - [RetailBankingLoginAll](#retailbankingloginall)
-        - [RetailBankingLoginExactMatch](#retailbankingloginexactmatch)
-        - [RetailBankingLoginCount](#retailbankinglogincount)
-        - [RetailBankingLoginCountExactMatch](#retailbankinglogincountexactmatch)
-   
-    
-    - [RetailBankingPayee](#retailbankingpayee)
-      - [Create](#create-20)
-      - [Update](#update-20)
-      - [Read](#read-20)
-      - [Delete](#delete-20)
-      - [Query Scopes](#query-scopes-20)
-      
-        - [RetailBankingPayeeAll](#retailbankingpayeeall)
-        - [RetailBankingPayeeExactMatch](#retailbankingpayeeexactmatch)
-        - [RetailBankingPayeeCount](#retailbankingpayeecount)
-        - [RetailBankingPayeeCountExactMatch](#retailbankingpayeecountexactmatch)
-   
-    
-    - [RetailBankingPayeeType](#retailbankingpayeetype)
-      - [Create](#create-21)
-      - [Update](#update-21)
-      - [Read](#read-21)
-      - [Delete](#delete-21)
-      - [Query Scopes](#query-scopes-21)
-      
-        - [RetailBankingPayeeTypeAll](#retailbankingpayeetypeall)
-        - [RetailBankingPayeeTypeExactMatch](#retailbankingpayeetypeexactmatch)
-        - [RetailBankingPayeeTypeCount](#retailbankingpayeetypecount)
-        - [RetailBankingPayeeTypeCountExactMatch](#retailbankingpayeetypecountexactmatch)
-   
-    
-    - [RetailBankingRewardsCatalog](#retailbankingrewardscatalog)
-      - [Create](#create-22)
-      - [Update](#update-22)
-      - [Read](#read-22)
-      - [Delete](#delete-22)
-      - [Query Scopes](#query-scopes-22)
-      
-        - [RetailBankingRewardsCatalogAll](#retailbankingrewardscatalogall)
-        - [RetailBankingRewardsCatalogExactMatch](#retailbankingrewardscatalogexactmatch)
-        - [RetailBankingRewardsCatalogCount](#retailbankingrewardscatalogcount)
-        - [RetailBankingRewardsCatalogCountExactMatch](#retailbankingrewardscatalogcountexactmatch)
-        - [RetailBankingRewardsCatalogRewardsCatalog](#retailbankingrewardscatalogrewardscatalog)
-   
-    
-    - [RetailBankingRewardsRedemption](#retailbankingrewardsredemption)
-      - [Create](#create-23)
-      - [Update](#update-23)
-      - [Read](#read-23)
-      - [Delete](#delete-23)
-      - [Query Scopes](#query-scopes-23)
-      
-        - [RetailBankingRewardsRedemptionAll](#retailbankingrewardsredemptionall)
-        - [RetailBankingRewardsRedemptionExactMatch](#retailbankingrewardsredemptionexactmatch)
-        - [RetailBankingRewardsRedemptionCount](#retailbankingrewardsredemptioncount)
-        - [RetailBankingRewardsRedemptionCountExactMatch](#retailbankingrewardsredemptioncountexactmatch)
-   
+
 
 
 ##Adding SDK to Application
@@ -360,32 +174,29 @@ Some basic setup is required in order to utilize the SDK effectively in your app
 NSURL url = [NSURL urlWithString:"www.example.com:3000"];
 [AnyPresenceAPI setBaseURL:url];
 ```
-
-If certificate pinning is necessary, the following setup will enable the feature.
-
+An auth token must be set and will be used in future calls
 ```
-NSString *certificatePath = [[NSBundle mainBundle] pathForResource:@"myCertificate" ofType:@"cer"];
-[AnyPresenceAPI setSSLCertificate:certificatePath];
+NSDictionary *clientContext = @{@"clientID":[self.clientIdTextField.text copy]};
+LoginInfo *loginInfo = [[LoginInfo alloc] init];
+loginInfo.username = [self.usernameTextField.text copy];
+loginInfo.password = [self.passwordTextField.text copy];
+LoginViewController * __weak weakSelf = self;
+[loginInfo createAsyncWithContext:clientContext async:^(id object, NSError *error) {
+    if ([object token]) {
+        [object setToken:[@"Bearer " stringByAppendingString:[object token]]];
+        NSMutableDictionary *loginContext = [NSMutableDictionary dictionary];
+        [loginContext addEntriesFromDictionary:clientContext];
+        [loginContext addEntriesFromDictionary:@{@"loginInfo":object}];
+        [[ContextManager sharedManager] setLoginContext:loginContext];
+        [weakSelf performSegueWithIdentifier:@"TabBarControllerSegueID" sender:self];
+    }
+    else {
+        weakSelf.loginButton.hidden = NO;
+        [weakSelf.activityIndicatorView stopAnimating];
+        [[[UIAlertView alloc] initWithTitle:@"Login Error" message:error.description delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+    }
+}];
 ```
-
-Alternatively, the base url and certificate can be set in the same call in the following manner:
-
-```
-NSURL *url = [NSURL URLWithString:@"https://www.example.com:3000/api/v1/"];
-NSString *certificatePath = [[NSBundle mainBundle] pathForResource:@"myCertificate" ofType:@"cer"];
-[AnyPresenceAPI setBaseURL:url withSSLCertificatePath:certificatePath];
-```
-
-Authentication can be set in the following manner:
-
-```
-AuthManager * auth = [AuthManager new];
-auth.signInURL = [NSURL URLWithString:@"https://www.example.com:3000/auth/password/callback"];
-auth.signOutURL = [NSURL URLWithString:@"https://www.example.com:3000/auth/signout"];
-auth.persistsCurrentCredentials = NO;
-[AuthManager setDefaultManager:auth];
-```
-
 ##CRUD
 
 The SDK supports asynchronous CRUD method calls.  Synchronous calls have been deprecated in this version of the SDK.  The following serve as examples of basic CRUD method calls.
@@ -431,7 +242,7 @@ NSDictionary *params = @{@"foo0" : @"bar0",
 ###Update
 ```
 foo.someField = @"update";
-    
+
 [foo updateAsync:^(id object, NSError *error) {
     if (!error) {
         // Process response.
@@ -487,7 +298,7 @@ myMap = Object used to interpolate all strings prefixed with "map."
 
 ```
 NSDictionary *params = @{ @"foo" : @"bar" };
-    
+
 Foo *foo = [Car new];
 foo.id = @"123";
 foo.color = @"John";
@@ -500,7 +311,7 @@ NSDictionary *context = @{ @"foo" : foo };
     }
 }];
 ```
- 
+
 If uninterpolated string does not contain a prefix (i.e. ```{{longitude}}```) a single object instance is allowed to be passed as a context.
 
 ```
@@ -541,7 +352,7 @@ someFolder = Object used to interpolate all strings prefixed with "folder."
 
 ```
 NSDictionary *params = @{ @"foo" : @"bar" };
-    
+
 Foo *foo1 = [Foo new];
 foo1.id = @"123";
 foo1.name = @"John";
@@ -562,68 +373,3 @@ NSDictionary *context = @{ @"foo1" : bar1,
 
 A context is optional and only required if interpolation is necessary of any previously defined variables at SDK creation.  Set context to nil if no interpolation is required.  Passing nil for context or providing a non-KVC compliant context object (i.e. NSArray) when interpolation is required will produce a string that is partially or entirely uninterpolated causing the given request to fail.
 */
-
-##Push Notification
-
-The SDK support push notification, including device registration and channel subscriptions.  The following as examples illustration how to accomplish each.
-
-###Register Device
-```
-[APPushNotification registerDevice:@"1234567890123456789012345678901234567890"
-                          callback:^(NSString *response, NSError *error) {
-                              if (!error) {
-                                  NSLog(@"RESPONSE: %@", response);
-                              }
-}];
-```
-
-###Unregister Device
-```
-[APPushNotification unregisterDevice:@"1234567890123456789012345678901234567890"
-                            callback:^(NSString *response, NSError *error) {
-                                if (!error) {
-                                    NSLog(@"RESPONSE: %@", response);
-                                }
-}];
-```
-
-###Subscribe to Channel
-```
-[APPushNotification subscribeToChannel:@"MyChannel"
-                              deviceId:@"1234567890123456789012345678901234567890"
-                              callback:^(NSString *response, NSError *error) {
-                                  if (!error) {
-                                      NSLog(@"RESPONSE: %@", response);
-                                  }
-}];
-```
-
-###Unsubscribe from Channel
-```
-[APPushNotification unsubscribeFromChannel:@"MyChannel"
-                                  deviceId:@"1234567890123456789012345678901234567890"
-                                  callback:^(NSString *response, NSError *error) {
-                                      if (!error) {
-                                          NSLog(@"RESPONSE: %@", response);
-                                      }
-}];
-```
-
-###Send Message to Channel
-```
-APPushNotificationData *data = [[APPushNotificationData alloc] init];
-data.alert = @"Foobar";
-data.sound = @"ding";
-data.badge = @"1";
-data.expiry = 1000;
-
-[APPushNotification sendMessage:@"FOOBAR"
-                    channelName:@"MyChannel"
-                        iOSData:data
-                    androidData:nil
-                       callback:^(NSString *response, NSError *error) {
-                           if (!error) {
-                               NSLog(@"RESPONSE: %@", response);
-                           }
-}];
-```
