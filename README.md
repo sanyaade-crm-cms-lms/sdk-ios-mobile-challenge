@@ -1,7 +1,5 @@
 #CitiMobileChallenge SDK
 
-[Citi Mobile Challenge iOS Sample App](https://github.com/ap-customer-citi/sample-ios-mobile-challenge)
-
 ## Description
 
 This should serve as a guide for the iOS SDK for CitiMobileChallenge.
@@ -17,6 +15,9 @@ This should serve as a guide for the iOS SDK for CitiMobileChallenge.
 
 ## Project Structure
 (Use the following subset of calls, refer to the full docs for implementation)
+
+A working native sample app that calls a subset of these APIs using this SDK is available for download <a href="https://github.com/ap-customer-citi/sample-ios-mobile-challenge">here</a>.  Download and run in the Xcode simulator.
+
 ### Retail Banking
     - [RetailBankingLogin]
       - [Create] (POST /retailbanking/v1/login)
