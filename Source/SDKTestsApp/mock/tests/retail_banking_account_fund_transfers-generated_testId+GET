@@ -1,8 +1,8 @@
 HTTP/1.1 200 OK
-Date: 2015-09-15T14:00:46-04:00
+Date: 2015-09-18T17:33:54-04:00
 Status: 200 OK
 Connection: close
 Content-Type: application/json; charset=utf-8
 Content-Length: 357
 
-{"id":"generated_testId","amount":384.0,"currency":"testCurrency","destination_account_id":"testDestinationAccountId","destination_id":"testDestinationId","memo":"testMemo","payee_desc":"testPayeeDesc","payee_id":"testPayeeId","payee_type":"testPayeeType","payment_type":395,"reference_number":"testReferenceNumber","transaction_date":"testTransactionDate"}
+{"id":"generated_testId","amount":193.0,"currency":"testCurrency","destination_account_id":"testDestinationAccountId","destination_id":"testDestinationId","memo":"testMemo","payee_desc":"testPayeeDesc","payee_id":"testPayeeId","payee_type":"testPayeeType","payment_type":175,"reference_number":"testReferenceNumber","transaction_date":"testTransactionDate"}

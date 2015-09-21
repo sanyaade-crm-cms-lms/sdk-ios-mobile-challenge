@@ -824,11 +824,11 @@
         config.incrementalHttpHeaders = incrementalHttpHeaders;
 
         NSMutableDictionary *incrementalURLParameters = [NSMutableDictionary new];
-        [incrementalURLParameters setObject:@"{{query.query.citi_ref}}" forKey:@"citi_ref"];
-        [incrementalURLParameters setObject:@"{{query.query.customer_txn_ref}}" forKey:@"customer_txn_ref"];
-        [incrementalURLParameters setObject:@"{{query.query.to_currency}}" forKey:@"to_currency"];
-        [incrementalURLParameters setObject:@"{{query.query.beneficiary_name}}" forKey:@"beneficiary_name"];
         [incrementalURLParameters setObject:@"{{query.query.value_date}}" forKey:@"value_date"];
+        [incrementalURLParameters setObject:@"{{query.query.beneficiary_name}}" forKey:@"beneficiary_name"];
+        [incrementalURLParameters setObject:@"{{query.query.to_currency}}" forKey:@"to_currency"];
+        [incrementalURLParameters setObject:@"{{query.query.customer_txn_ref}}" forKey:@"customer_txn_ref"];
+        [incrementalURLParameters setObject:@"{{query.query.citi_ref}}" forKey:@"citi_ref"];
         config.incrementalURLParameters = incrementalURLParameters;
        
 

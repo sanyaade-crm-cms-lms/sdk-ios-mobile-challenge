@@ -358,12 +358,12 @@
         config.incrementalHttpHeaders = incrementalHttpHeaders;
 
         NSMutableDictionary *incrementalURLParameters = [NSMutableDictionary new];
-        [incrementalURLParameters setObject:@"{{query.query.state}}" forKey:@"state"];
-        [incrementalURLParameters setObject:@"{{query.query.email}}" forKey:@"email"];
-        [incrementalURLParameters setObject:@"{{query.query.address_line1}}" forKey:@"address_line1"];
-        [incrementalURLParameters setObject:@"{{query.query.address_line2}}" forKey:@"address_line2"];
-        [incrementalURLParameters setObject:@"{{query.query.country}}" forKey:@"country"];
         [incrementalURLParameters setObject:@"{{query.query.zipcode}}" forKey:@"zipcode"];
+        [incrementalURLParameters setObject:@"{{query.query.country}}" forKey:@"country"];
+        [incrementalURLParameters setObject:@"{{query.query.state}}" forKey:@"state"];
+        [incrementalURLParameters setObject:@"{{query.query.address_line2}}" forKey:@"address_line2"];
+        [incrementalURLParameters setObject:@"{{query.query.address_line1}}" forKey:@"address_line1"];
+        [incrementalURLParameters setObject:@"{{query.query.email}}" forKey:@"email"];
         config.incrementalURLParameters = incrementalURLParameters;
     });
 

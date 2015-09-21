@@ -992,15 +992,15 @@
         config.incrementalHttpHeaders = incrementalHttpHeaders;
 
         NSMutableDictionary *incrementalURLParameters = [NSMutableDictionary new];
-        [incrementalURLParameters setObject:@"{{query.query.latitude}}" forKey:@"latitude"];
-        [incrementalURLParameters setObject:@"{{query.query.longitude}}" forKey:@"longitude"];
-        [incrementalURLParameters setObject:@"{{query.query.radius}}" forKey:@"radius"];
-        [incrementalURLParameters setObject:@"{{query.query.radius_uom}}" forKey:@"radius_uom"];
-        [incrementalURLParameters setObject:@"{{query.query.location_type}}" forKey:@"location_type"];
-        [incrementalURLParameters setObject:@"{{query.query.address}}" forKey:@"address"];
-        [incrementalURLParameters setObject:@"{{query.query.city}}" forKey:@"city"];
-        [incrementalURLParameters setObject:@"{{query.query.state}}" forKey:@"state"];
         [incrementalURLParameters setObject:@"{{query.query.postal_code}}" forKey:@"postal_code"];
+        [incrementalURLParameters setObject:@"{{query.query.state}}" forKey:@"state"];
+        [incrementalURLParameters setObject:@"{{query.query.city}}" forKey:@"city"];
+        [incrementalURLParameters setObject:@"{{query.query.address}}" forKey:@"address"];
+        [incrementalURLParameters setObject:@"{{query.query.location_type}}" forKey:@"location_type"];
+        [incrementalURLParameters setObject:@"{{query.query.radius_uom}}" forKey:@"radius_uom"];
+        [incrementalURLParameters setObject:@"{{query.query.radius}}" forKey:@"radius"];
+        [incrementalURLParameters setObject:@"{{query.query.longitude}}" forKey:@"longitude"];
+        [incrementalURLParameters setObject:@"{{query.query.latitude}}" forKey:@"latitude"];
         config.incrementalURLParameters = incrementalURLParameters;
        
 

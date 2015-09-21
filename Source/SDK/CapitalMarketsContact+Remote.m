@@ -555,8 +555,8 @@
         config.incrementalHttpHeaders = incrementalHttpHeaders;
 
         NSMutableDictionary *incrementalURLParameters = [NSMutableDictionary new];
-        [incrementalURLParameters setObject:@"{{query.query.client_name}}" forKey:@"client_name"];
         [incrementalURLParameters setObject:@"{{query.query.year}}" forKey:@"year"];
+        [incrementalURLParameters setObject:@"{{query.query.client_name}}" forKey:@"client_name"];
         config.incrementalURLParameters = incrementalURLParameters;
        
 

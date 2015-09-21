@@ -475,8 +475,8 @@
         config.incrementalHttpHeaders = incrementalHttpHeaders;
 
         NSMutableDictionary *incrementalURLParameters = [NSMutableDictionary new];
-        [incrementalURLParameters setObject:@"{{query.query.from_currency}}" forKey:@"from_currency"];
         [incrementalURLParameters setObject:@"{{query.query.to_currency}}" forKey:@"to_currency"];
+        [incrementalURLParameters setObject:@"{{query.query.from_currency}}" forKey:@"from_currency"];
         config.incrementalURLParameters = incrementalURLParameters;
        
 

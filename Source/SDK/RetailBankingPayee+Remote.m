@@ -122,7 +122,7 @@
         NSMutableDictionary *fieldMappings = [NSMutableDictionary new];
 
         //Field Mapping definitions at object level.
-        [fieldMappings setObject:@"id" forKey:@"id"];
+        [fieldMappings setObject:@"payee_id" forKey:@"id"];
         [fieldMappings setObject:@"add_payee_details" forKey:@"add_payee_details"];
         [fieldMappings setObject:@"bank_name_ext" forKey:@"bank_name_ext"];
         [fieldMappings setObject:@"detail_prefix" forKey:@"detail_prefix"];
@@ -135,6 +135,7 @@
         [fieldMappings setObject:@"payment_method" forKey:@"payment_method"];
 
         //Field Mapping definitions at endpoint level.
+        [fieldMappings setObject:@"payee_id" forKey:@"id"];
         [fieldMappings setObject:@"payment_method" forKey:@"payment_method"];
         [fieldMappings setObject:@"payee_type" forKey:@"payee_type"];
         [fieldMappings setObject:@"payee_list_id_type" forKey:@"payee_list_id_type"];
@@ -145,7 +146,6 @@
         [fieldMappings setObject:@"detail_prefix" forKey:@"detail_prefix"];
         [fieldMappings setObject:@"bank_name_ext" forKey:@"bank_name_ext"];
         [fieldMappings setObject:@"add_payee_details" forKey:@"add_payee_details"];
-        [fieldMappings setObject:@"id" forKey:@"id"];
     
         config.localToRemoteFieldPathsDictionary = fieldMappings;
         config.httpVerb = @"GET";
@@ -175,7 +175,7 @@
         NSMutableDictionary *fieldMappings = [NSMutableDictionary new];
 
         //Field Mapping definitions at object level.
-        [fieldMappings setObject:@"id" forKey:@"id"];
+        [fieldMappings setObject:@"payee_id" forKey:@"id"];
         [fieldMappings setObject:@"add_payee_details" forKey:@"add_payee_details"];
         [fieldMappings setObject:@"bank_name_ext" forKey:@"bank_name_ext"];
         [fieldMappings setObject:@"detail_prefix" forKey:@"detail_prefix"];
@@ -188,6 +188,7 @@
         [fieldMappings setObject:@"payment_method" forKey:@"payment_method"];
 
         //Field Mapping definitions at endpoint level.
+        [fieldMappings setObject:@"payee_id" forKey:@"id"];
         [fieldMappings setObject:@"payment_method" forKey:@"payment_method"];
         [fieldMappings setObject:@"payee_type" forKey:@"payee_type"];
         [fieldMappings setObject:@"payee_list_id_type" forKey:@"payee_list_id_type"];
@@ -198,7 +199,6 @@
         [fieldMappings setObject:@"detail_prefix" forKey:@"detail_prefix"];
         [fieldMappings setObject:@"bank_name_ext" forKey:@"bank_name_ext"];
         [fieldMappings setObject:@"add_payee_details" forKey:@"add_payee_details"];
-        [fieldMappings setObject:@"id" forKey:@"id"];
     
         config.localToRemoteFieldPathsDictionary = fieldMappings;
         config.httpVerb = @"GET";
@@ -229,7 +229,7 @@
         NSMutableDictionary *fieldMappings = [NSMutableDictionary new];
 
         //Field Mapping definitions at object level.
-        [fieldMappings setObject:@"id" forKey:@"id"];
+        [fieldMappings setObject:@"payee_id" forKey:@"id"];
         [fieldMappings setObject:@"add_payee_details" forKey:@"add_payee_details"];
         [fieldMappings setObject:@"bank_name_ext" forKey:@"bank_name_ext"];
         [fieldMappings setObject:@"detail_prefix" forKey:@"detail_prefix"];
@@ -242,6 +242,7 @@
         [fieldMappings setObject:@"payment_method" forKey:@"payment_method"];
 
         //Field Mapping definitions at endpoint level.
+        [fieldMappings setObject:@"payee_id" forKey:@"id"];
         [fieldMappings setObject:@"payment_method" forKey:@"payment_method"];
         [fieldMappings setObject:@"payee_type" forKey:@"payee_type"];
         [fieldMappings setObject:@"payee_list_id_type" forKey:@"payee_list_id_type"];
@@ -252,7 +253,6 @@
         [fieldMappings setObject:@"detail_prefix" forKey:@"detail_prefix"];
         [fieldMappings setObject:@"bank_name_ext" forKey:@"bank_name_ext"];
         [fieldMappings setObject:@"add_payee_details" forKey:@"add_payee_details"];
-        [fieldMappings setObject:@"id" forKey:@"id"];
     
         config.localToRemoteFieldPathsDictionary = fieldMappings;
         config.httpVerb = @"GET";
@@ -283,7 +283,7 @@
         NSMutableDictionary *fieldMappings = [NSMutableDictionary new];
 
         //Field Mapping definitions at object level.
-        [fieldMappings setObject:@"id" forKey:@"id"];
+        [fieldMappings setObject:@"payee_id" forKey:@"id"];
         [fieldMappings setObject:@"add_payee_details" forKey:@"add_payee_details"];
         [fieldMappings setObject:@"bank_name_ext" forKey:@"bank_name_ext"];
         [fieldMappings setObject:@"detail_prefix" forKey:@"detail_prefix"];
@@ -296,6 +296,7 @@
         [fieldMappings setObject:@"payment_method" forKey:@"payment_method"];
 
         //Field Mapping definitions at endpoint level.
+        [fieldMappings setObject:@"payee_id" forKey:@"id"];
         [fieldMappings setObject:@"payment_method" forKey:@"payment_method"];
         [fieldMappings setObject:@"payee_type" forKey:@"payee_type"];
         [fieldMappings setObject:@"payee_list_id_type" forKey:@"payee_list_id_type"];
@@ -306,7 +307,6 @@
         [fieldMappings setObject:@"detail_prefix" forKey:@"detail_prefix"];
         [fieldMappings setObject:@"bank_name_ext" forKey:@"bank_name_ext"];
         [fieldMappings setObject:@"add_payee_details" forKey:@"add_payee_details"];
-        [fieldMappings setObject:@"id" forKey:@"id"];
     
         config.localToRemoteFieldPathsDictionary = fieldMappings;
         config.httpVerb = @"GET";
@@ -405,7 +405,7 @@
         NSMutableDictionary *fieldMappings = [NSMutableDictionary new];
 
         //Field Mapping definitions at object level.
-        [fieldMappings setObject:@"id" forKey:@"id"];
+        [fieldMappings setObject:@"payee_id" forKey:@"id"];
         [fieldMappings setObject:@"add_payee_details" forKey:@"add_payee_details"];
         [fieldMappings setObject:@"bank_name_ext" forKey:@"bank_name_ext"];
         [fieldMappings setObject:@"detail_prefix" forKey:@"detail_prefix"];
@@ -418,6 +418,7 @@
         [fieldMappings setObject:@"payment_method" forKey:@"payment_method"];
 
         //Field Mapping definitions at endpoint level.
+        [fieldMappings setObject:@"payee_id" forKey:@"id"];
         [fieldMappings setObject:@"payment_method" forKey:@"payment_method"];
         [fieldMappings setObject:@"payee_type" forKey:@"payee_type"];
         [fieldMappings setObject:@"payee_list_id_type" forKey:@"payee_list_id_type"];
@@ -428,7 +429,6 @@
         [fieldMappings setObject:@"detail_prefix" forKey:@"detail_prefix"];
         [fieldMappings setObject:@"bank_name_ext" forKey:@"bank_name_ext"];
         [fieldMappings setObject:@"add_payee_details" forKey:@"add_payee_details"];
-        [fieldMappings setObject:@"id" forKey:@"id"];
         
         config.localToRemoteFieldPathsDictionary = fieldMappings;
         config.httpVerb = @"POST";
@@ -455,7 +455,7 @@
         NSMutableDictionary *fieldMappings = [NSMutableDictionary new];
 
         //Field Mapping definitions at object level.
-        [fieldMappings setObject:@"id" forKey:@"id"];
+        [fieldMappings setObject:@"payee_id" forKey:@"id"];
         [fieldMappings setObject:@"add_payee_details" forKey:@"add_payee_details"];
         [fieldMappings setObject:@"bank_name_ext" forKey:@"bank_name_ext"];
         [fieldMappings setObject:@"detail_prefix" forKey:@"detail_prefix"];
@@ -468,6 +468,7 @@
         [fieldMappings setObject:@"payment_method" forKey:@"payment_method"];
 
         //Field Mapping definitions at endpoint level.
+        [fieldMappings setObject:@"payee_id" forKey:@"id"];
         [fieldMappings setObject:@"payment_method" forKey:@"payment_method"];
         [fieldMappings setObject:@"payee_type" forKey:@"payee_type"];
         [fieldMappings setObject:@"payee_list_id_type" forKey:@"payee_list_id_type"];
@@ -478,7 +479,6 @@
         [fieldMappings setObject:@"detail_prefix" forKey:@"detail_prefix"];
         [fieldMappings setObject:@"bank_name_ext" forKey:@"bank_name_ext"];
         [fieldMappings setObject:@"add_payee_details" forKey:@"add_payee_details"];
-        [fieldMappings setObject:@"id" forKey:@"id"];
         
         config.localToRemoteFieldPathsDictionary = fieldMappings;
         config.httpVerb = @"GET";
@@ -505,7 +505,7 @@
         NSMutableDictionary *fieldMappings = [NSMutableDictionary new];
 
         //Field Mapping definitions at object level.
-        [fieldMappings setObject:@"id" forKey:@"id"];
+        [fieldMappings setObject:@"payee_id" forKey:@"id"];
         [fieldMappings setObject:@"add_payee_details" forKey:@"add_payee_details"];
         [fieldMappings setObject:@"bank_name_ext" forKey:@"bank_name_ext"];
         [fieldMappings setObject:@"detail_prefix" forKey:@"detail_prefix"];
@@ -518,6 +518,7 @@
         [fieldMappings setObject:@"payment_method" forKey:@"payment_method"];
 
         //Field Mapping definitions at endpoint level.
+        [fieldMappings setObject:@"payee_id" forKey:@"id"];
         [fieldMappings setObject:@"payment_method" forKey:@"payment_method"];
         [fieldMappings setObject:@"payee_type" forKey:@"payee_type"];
         [fieldMappings setObject:@"payee_list_id_type" forKey:@"payee_list_id_type"];
@@ -528,7 +529,6 @@
         [fieldMappings setObject:@"detail_prefix" forKey:@"detail_prefix"];
         [fieldMappings setObject:@"bank_name_ext" forKey:@"bank_name_ext"];
         [fieldMappings setObject:@"add_payee_details" forKey:@"add_payee_details"];
-        [fieldMappings setObject:@"id" forKey:@"id"];
         
         config.localToRemoteFieldPathsDictionary = fieldMappings;
         config.httpVerb = @"PUT";
@@ -554,7 +554,7 @@
         NSMutableDictionary *fieldMappings = [NSMutableDictionary new];
 
         //Field Mapping definitions at object level.
-        [fieldMappings setObject:@"id" forKey:@"id"];
+        [fieldMappings setObject:@"payee_id" forKey:@"id"];
         [fieldMappings setObject:@"add_payee_details" forKey:@"add_payee_details"];
         [fieldMappings setObject:@"bank_name_ext" forKey:@"bank_name_ext"];
         [fieldMappings setObject:@"detail_prefix" forKey:@"detail_prefix"];
@@ -567,6 +567,7 @@
         [fieldMappings setObject:@"payment_method" forKey:@"payment_method"];
 
         //Field Mapping definitions at endpoint level.
+        [fieldMappings setObject:@"payee_id" forKey:@"id"];
         [fieldMappings setObject:@"payment_method" forKey:@"payment_method"];
         [fieldMappings setObject:@"payee_type" forKey:@"payee_type"];
         [fieldMappings setObject:@"payee_list_id_type" forKey:@"payee_list_id_type"];
@@ -577,7 +578,6 @@
         [fieldMappings setObject:@"detail_prefix" forKey:@"detail_prefix"];
         [fieldMappings setObject:@"bank_name_ext" forKey:@"bank_name_ext"];
         [fieldMappings setObject:@"add_payee_details" forKey:@"add_payee_details"];
-        [fieldMappings setObject:@"id" forKey:@"id"];
         
         config.localToRemoteFieldPathsDictionary = fieldMappings;
         config.httpVerb = @"DELETE";

@@ -353,7 +353,7 @@
     dispatch_once(&onceToken, ^{
         config = [[APEndPointConfiguration alloc] init];
         config.serializationFormat = APSerializationFormatJSON;
-        config.objectsPath = @"$.*";
+        config.objectsPath = @"$";
 
         NSMutableDictionary *fieldMappings = [NSMutableDictionary new];
 

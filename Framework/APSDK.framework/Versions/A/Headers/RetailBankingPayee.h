@@ -30,7 +30,7 @@
 /*!
  @var id
  @abstract Generated model property: id.
- @discussion Primary key. Generated on the server.
+ @discussion Primary key.
  */
 @property (nonatomic, strong) NSString * id;
 

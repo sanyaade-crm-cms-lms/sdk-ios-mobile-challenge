@@ -545,8 +545,8 @@
         config.incrementalHttpHeaders = incrementalHttpHeaders;
 
         NSMutableDictionary *incrementalURLParameters = [NSMutableDictionary new];
-        [incrementalURLParameters setObject:@"{{query.query.region}}" forKey:@"region"];
         [incrementalURLParameters setObject:@"{{query.query.year}}" forKey:@"year"];
+        [incrementalURLParameters setObject:@"{{query.query.region}}" forKey:@"region"];
         config.incrementalURLParameters = incrementalURLParameters;
        
 

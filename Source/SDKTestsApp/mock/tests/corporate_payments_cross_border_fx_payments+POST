@@ -1,8 +1,8 @@
 HTTP/1.1 201 Created
-Date: 2015-09-15T14:00:46-04:00
+Date: 2015-09-18T17:33:54-04:00
 Status: 201 Created
 Connection: close
 Content-Type: application/json; charset=utf-8
 Content-Length: 660
 
-{"id":"generated_testId","beneficiary_account":"testBeneficiaryAccount","beneficiary_address":"testBeneficiaryAddress","beneficiary_bank":"testBeneficiaryBank","beneficiary_name":"testBeneficiaryName","citi_ref":"testCitiRef","created_by":"testCreatedBy","created_on":"testCreatedOn","customer_txn_ref":"testCustomerTxnRef","debtor_account":"testDebtorAccount","debtor_address":"testDebtorAddress","debtor_name":"testDebtorName","from_amount":284.0,"from_currency":"testFromCurrency","payment_details":"testPaymentDetails","rate_reference":"testRateReference","status":"testStatus","to_amount":188.0,"to_currency":"testToCurrency","value_date":"testValueDate"}
+{"id":"generated_testId","beneficiary_account":"testBeneficiaryAccount","beneficiary_address":"testBeneficiaryAddress","beneficiary_bank":"testBeneficiaryBank","beneficiary_name":"testBeneficiaryName","citi_ref":"testCitiRef","created_by":"testCreatedBy","created_on":"testCreatedOn","customer_txn_ref":"testCustomerTxnRef","debtor_account":"testDebtorAccount","debtor_address":"testDebtorAddress","debtor_name":"testDebtorName","from_amount":345.0,"from_currency":"testFromCurrency","payment_details":"testPaymentDetails","rate_reference":"testRateReference","status":"testStatus","to_amount":372.0,"to_currency":"testToCurrency","value_date":"testValueDate"}

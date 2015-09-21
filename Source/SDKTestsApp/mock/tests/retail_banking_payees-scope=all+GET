@@ -1,8 +1,8 @@
 HTTP/1.1 200 OK
-Date: 2015-09-15T14:00:46-04:00
+Date: 2015-09-18T17:33:54-04:00
 Status: 200 OK
 Connection: close
 Content-Type: application/json; charset=utf-8
-Content-Length: 363
+Content-Length: 353
 
-[{"id":"generated_testId","add_payee_details":["test",-1,["nested",{"nested":"hash"}]],"bank_name_ext":"testBankNameExt","detail_prefix":"testDetailPrefix","last_payment_amt":220.0,"payee_account":"testPayeeAccount","payee_description":"testPayeeDescription","payee_list_id_two":352,"payee_list_id_type":297,"payee_type":768,"payment_method":"testPaymentMethod"}]
+[{"id":"testId","add_payee_details":["test",-1,["nested",{"nested":"hash"}]],"bank_name_ext":"testBankNameExt","detail_prefix":"testDetailPrefix","last_payment_amt":449.0,"payee_account":"testPayeeAccount","payee_description":"testPayeeDescription","payee_list_id_two":427,"payee_list_id_type":431,"payee_type":174,"payment_method":"testPaymentMethod"}]
