@@ -1,5 +1,9 @@
 #CitiMobileChallenge SDK
-
+```
+Click
+[Citi Mobile Challenge iOS Sample App](https://github.com/ap-customer-citi/sample-ios-mobile-challenge)
+for a sample app which references this SDK
+```
 ## Description
 
 This should serve as a guide for the iOS SDK for CitiMobileChallenge.
